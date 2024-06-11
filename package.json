@@ -1,0 +1,22 @@
+{
+  "name": "tecsum-web",
+  "version": "1.0.0",
+  "main": ".eleventy.js",
+  "scripts": {
+    "install": "npm install @11ty/eleventy --save-dev",
+    "start": "npx @11ty/eleventy --serve --port=7777",
+    "clean": "rmdir /s /q docs",
+    "deploy": "npx @11ty/eleventy --pathprefix=/",
+    "deploy-subdomain": "npx @11ty/eleventy --pathprefix=/Tecsum-Web-Prueba/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "Pagina web creada para la intitucion TECSUM",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}

@@ -1,0 +1,70 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+// Create your own map
+$custom-colors: (
+  "custom-dark-blue": #00072d,
+  "custom-navy-blue": #001c55,
+  "custom-soft-blue": #0a2472,
+  "custom-blue": #0e6ba8,
+  "custom-blue-white": #a6e1fa
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+.bg-custom-dark-blue {
+    background-color: map-get($theme-colors, "custom-dark-blue");
+  }
+
+  
+
+  // Estilos para el tema custom-light
+.navbar[data-bs-theme=custom-light] {
+    --bs-navbar-color: rgba(255, 255, 255, 0.55);
+    --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
+    --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
+    --bs-navbar-active-color: #fff;
+    --bs-navbar-brand-color: #fff;
+    --bs-navbar-brand-hover-color: #fff;
+    --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    
+  }
+
+  // Estilos personalizados para el botón del dropdown
+.dropdown-menu .dropdown-item.active,
+.dropdown-menu .dropdown-item:active {
+  background-color: map-get($theme-colors, "custom-navy-blue") !important;
+  color: #fff; // Puedes ajustar esto según sea necesario
+}
+
+  
+  .card .content a {
+    padding: 10px 20px;
+    background-color: map-get($theme-colors, "custom-soft-blue");
+    color: #fff;
+    border-radius: 40px;
+    margin-top: 20px;
+  }
+
+
+
+  .btn-custom-blue {
+    display: block;
+    /* Hacer el botón de enlace un bloque */
+    width: 100%;
+    /* Ancho completo del botón */
+}
+
+
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

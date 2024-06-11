@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
+body {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #F2F2F2;
+}
+
+h1,
+h2 {
+    color: #0e6ba8;
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+.titleFont {
+    color: #0a2472;
+    font-size: 4rem;
+}
+
+p {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+
+
+/* Inicio- Card */
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+
+  /* Scrollbar styles for Webkit browsers (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    width: 10px; /* ancho de la barra de desplazamiento */
+    height: 10px; /* alto de la barra de desplazamiento horizontal */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1; /* color de la pista de la barra de desplazamiento */
+    border-radius: 10px; /* radio de borde para hacerlo redondeado */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #071773; /* color sólido del pulgar de la barra de desplazamiento */
+    border-radius: 10px; /* radio de borde para hacerlo redondeado */
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #2A558C; /* color sólido del pulgar de la barra de desplazamiento cuando se pasa el ratón por encima */
+  }
+
+  /* Scrollbar styles for Firefox */
+  scrollbar-width: thin; /* hace que la barra de desplazamiento sea delgada */
+  scrollbar-color: #071773 #f1f1f1; /* color del pulgar de la barra de desplazamiento y la pista */
+
+  /* For other browsers that support scrollbar styling */
+  &::-moz-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-moz-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  &::-moz-scrollbar-thumb {
+    background: #071773;
+    border-radius: 10px;
+  }
+
+  &::-moz-scrollbar-thumb:hover {
+    background: #2A558C;
+  }
+}
+
+
+
+
+.card-img-top {
+    width: 100%;
+    /* Ancho completo de la imagen */
+    height: 200px;
+    /* Altura de la imagen */
+    object-fit: cover;
+    /* Ajustar imagen para cubrir */
+    border-top-left-radius: 8px;
+    /* Radio del borde superior izquierdo */
+    border-top-right-radius: 8px;
+    /* Radio del borde superior derecho */
+}
+
+.card-body {
+    padding: 20px;
+    /* Espaciado interno del cuerpo de la tarjeta */
+}
+
+.card-title {
+    font-size: 20px;
+    /* Tamaño del título */
+    margin-bottom: 10px;
+    /* Margen inferior del título */
+}
+
+.card-text {
+    margin-bottom: 15px;
+    /* Margen inferior del texto de la tarjeta */
+}
+
+
+
+.card {
+    flex: 0 0 auto;
+    /* Evitar que las tarjetas se estiren */
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+
+
+.card .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    clip-path: circle(180px at center 0);
+}
+
+
+
+.card .content {
+    bottom: 10px;
+    padding: 20px;
+}
+
+.card .content p {
+    color: #666;
+}
+
+
+
+
+.Horizontal-Card {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    max-width: 400px;
+    transition: background-color 0.3s;
+    margin-bottom: 18px;
+}
+
+
+.Horizontal-Card:hover {
+    background-color: #edeff1;
+}
+
+.Horizontal-Card img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-left: 1rem;
+}
+
+.Horizontal-Card-content {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.Horizontal-Card-content h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+
+
+
+
+.whatsapp-icon {
+    width: 50px;
+    height: auto;
+}
+
+
+
+
+.btn-primary {
+    display: block;
+    /* Hacer el botón de enlace un bloque */
+    width: 100%;
+    /* Ancho completo del botón */
+}
+
+/* Final- Card */
+
+.img-fit-container {
+    max-height: 400px;
+    overflow: hidden;
+    /* Asegura que cualquier contenido que exceda la altura se oculte */
+}
+
+.img-fit {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+.thick-hr {
+    border: 3px solid #000000;
+    /* Agrega bordes a las celdas */
+    border-radius: 10px;
+    /* Agrega bordes redondeados */
+}
+
+
+.table-container {
+    border: 3px solid #000000;
+    /* Agrega bordes a las celdas */
+    border-radius: 10px;
+    /* Agrega bordes redondeados */
+    padding: 20px;
+    /* Añade espacio interno */
+}
+
+.btn-download {
+    background-color: #0a2472;
+    /* Color de fondo del botón */
+    color: #fff;
+    /* Color del texto */
+    padding: 10px 20px;
+    /* Ajusta el espacio interno del botón */
+    border-radius: 5px;
+    /* Agrega bordes redondeados al botón */
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+    display: inline-block;
+    /* Permite el uso de padding y border */
+    transition: background-color 0.3s;
+    /* Agrega una transición suave */
+}
+
+.btn-download:hover {
+    background-color: #a6e1fa;
+    /* Cambia el color de fondo al pasar el mouse */
+    border-color: #0a2472;
+    border-style: solid;
+}
+
+.btn-download i {
+    margin-right: 5px;
+    /* Añade un pequeño espacio entre el icono y el texto */
+}
+
+.video-container,
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container iframe,
+.map-container iframe,
+.video-container object,
+.map-container object,
+.video-container embed,
+.map-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 992px) {
+
+    /* Large devices (desktops, 992px and up) */
+    .map-container {
+        padding-bottom: 0;
+        /* Remove padding-bottom for fixed height */
+        height: 500px;
+        /* Fixed height */
+    }
+
+    .map-container iframe,
+    .map-container object,
+    .map-container embed {
+        height: 500px;
+        /* Fixed height */
+    }
+}
+
+
+
+/* Estilos para el botón de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25D366;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.whatsapp-button img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilos para el popup de WhatsApp */
+.whatsapp-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 1001;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: none;
+    width: 350px;
+    height: 25rem;
+    max-height: 500px;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.whatsapp-popup.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.whatsapp-header {
+    background-color: #25d366;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.whatsapp-header img {
+    width: 50px;
+    height: 50px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.whatsapp-header p {
+    margin: 0;
+    color: #fff;
+    /* Añadido color blanco para el texto */
+    line-height: 50px;
+    /* Ajustado line-height para alinear verticalmente */
+    font-size: 1.2rem;
+}
+
+.whatsapp-popup .btn-outline-success {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Animación de rotación */
+.rotate-icon {
+    animation: rotateIcon 0.2s ease forwards;
+}
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+.rotate-icon.reverse {
+    animation: rotateIconReverse 0.2s ease forwards;
+}
+
+@keyframes rotateIconReverse {
+    from {
+        transform: rotate(90deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
