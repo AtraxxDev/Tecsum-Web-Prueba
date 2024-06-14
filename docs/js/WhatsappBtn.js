@@ -2,7 +2,7 @@ export function WhatsappBtn() {
     document.addEventListener('DOMContentLoaded', (event) => {
         const whatsappButton = document.querySelector('.whatsapp-button');
         const whatsappPopup = document.querySelector('.whatsapp-popup');
-        const defaultMessage = '¡Hola! Estuve viendo Universidad Amerike | Videojuegos, Medios Creativos, Salud Fisica y Negocios Digitales. Me gustaría saber más sobre Maestrías en Campus CDMX. https://amerike.edu.mx/';
+        const defaultMessage = 'Hola! Estuve explorando Tecsum y me interesa saber más sobre las opciones educativas disponibles en este plantel. Me enteré a través de la página.  https://tecsum.edu.mx/ ¡Gracias espero su respuesta!';
 
         whatsappButton.addEventListener('click', () => {
             const whatsappIcon = whatsappButton.querySelector('img');
