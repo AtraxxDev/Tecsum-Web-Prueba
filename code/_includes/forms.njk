@@ -1,8 +1,10 @@
 <div class="container py-5">
-    <div class="row">
+    <div
+        class="row">
         <!-- Contenedor con fondo para imagen y formulario -->
         <div class="col-12 col-md-10 mx-auto bg-light p-4 rounded shadow">
-            <div class="row">
+            <div
+                class="row">
                 <!-- Columna de imagen -->
                 <div class="col-12 col-md-6 mb-4 mb-md-0 ">
                     <img src="/img/Contact.webp" class="img-fluid img-form" alt="Contacto">
@@ -27,7 +29,14 @@
                         </div>
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Número de Teléfono</label>
-                            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Número de Teléfono" pattern="[0-9]{10}" required>
+                            <input
+                                type="tel"
+                                class="form-control"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="Número de Teléfono"
+                                pattern="[0-9]{10}"
+                                required>
                         </div>
                         <div class="row mb-3">
                             <div class="col-12 col-md-6">
@@ -36,10 +45,18 @@
                                     <option value="" selected disabled>Selecciona un plantel</option>
                                     <option value="Naucalpan">Naucalpan</option>
                                     <option value="Tlalnepantla">Tlalnepantla</option>
-                                    {# <option value="Nicolás Romero">Nicolás Romero</option> #}
+                                    <!-- <option value="Nicolás Romero">Nicolás Romero</option> -->
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <label for="oferta" class="form-label">Oferta Educativa Deseada</label>
+                                <select class="form-select" id="oferta" name="oferta" required>
+                                    <option value="" selected disabled>Selecciona una oferta educativa</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-6">
                                 <label for="carrera" class="form-label">Carrera que te interesa</label>
                                 <select class="form-select" id="carrera" name="carrera" required>
                                     <option value="" selected disabled>Selecciona una carrera</option>
