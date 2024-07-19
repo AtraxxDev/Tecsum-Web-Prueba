@@ -18,9 +18,10 @@ p {
     font-size: 1.4rem;
 }
 
-ul{
+ul,ol{
     font-size: 1.4rem;
 }
+
 .text-justify{
     text-align: justify;
 }
@@ -28,6 +29,26 @@ ul{
 .ul-header{
     font-size: 1.2rem;
 
+}
+
+/* skill */
+
+.skill-container{
+    background-color: #202035;
+}
+
+.skill-container h4{
+    color: white;
+}
+
+.skill-img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.border-skill{
+    border: 2px solid;
+    border-color: #202035;
 }
 
 /* Banner */
@@ -188,6 +209,12 @@ h2 {
     font-size: 2.5rem;
 }
 
+h3{
+    color: var(--bs-custom-dark-blue);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
 .titleFont {
     color: #0a2472;
     font-size: 4rem;
@@ -227,14 +254,20 @@ h2 {
 
 /* Estilos de tabla */
 .table-container {
-    border: 3px solid #000000;
-    border-radius: 10px;
+
     padding: 20px;
 }
 
 .thick-hr {
     border: 3px solid #000000;
     border-radius: 10px;
+}
+
+.rounded-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 0 auto 20px; /* Center the image and add bottom margin */
 }
 
 /* Estilos para botones */

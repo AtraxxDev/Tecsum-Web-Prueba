@@ -9,7 +9,7 @@ export function WhatsappBtn() {
 
             if (whatsappPopup.classList.contains('show')) {
                 whatsappPopup.classList.remove('show');
-                whatsappIcon.src = '/Tecsum-Web-Prueba/img/Iconos/Whatsapp-icon2.png';
+                whatsappIcon.src = 'https://tecsum.edu.mx/Images/Iconos/Redes_Sociales/Whatsapp.webp';
                 whatsappIcon.classList.remove('rotate-icon');
                 whatsappIcon.classList.add('rotate-icon', 'reverse'); // Aplicar la animación en reversa
                 setTimeout(() => {
@@ -19,7 +19,7 @@ export function WhatsappBtn() {
                 whatsappPopup.style.display = 'block';
                 setTimeout(() => {
                     whatsappPopup.classList.add('show');
-                    whatsappIcon.src = '/Tecsum-Web-Prueba/img/Iconos/close-x-icon.png';
+                    whatsappIcon.src = 'https://tecsum.edu.mx/Images/Iconos/Redes_Sociales/Close-X.webp';
                     whatsappIcon.classList.remove('rotate-icon', 'reverse'); // Asegúrate de eliminar cualquier clase de rotación anterior
                     whatsappIcon.classList.add('rotate-icon'); // Aplicar la animación normal
                 }, 10); // Permite un pequeño retraso para la transición
@@ -30,7 +30,7 @@ export function WhatsappBtn() {
             if (!event.target.closest('.whatsapp-button') && !event.target.closest('.whatsapp-popup')) {
                 const whatsappIcon = whatsappButton.querySelector('img');
                 whatsappPopup.classList.remove('show');
-                whatsappIcon.src = '/Tecsum-Web-Prueba/img/Iconos/Whatsapp-icon2.png';
+                whatsappIcon.src = 'https://tecsum.edu.mx/Images/Iconos/Redes_Sociales/Whatsapp.webp';
                 whatsappIcon.classList.remove('rotate-icon');
                 whatsappIcon.classList.add('rotate-icon', 'reverse'); // Aplicar la animación en reversa
                 setTimeout(() => {
