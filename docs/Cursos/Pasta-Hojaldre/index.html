@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -88,13 +87,11 @@
           <ul class="dropdown-menu">
           
           <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Pasta-Hojaldre">Pasta Hojaldre</a></li>
-          <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Excel-Intermedio-Curso">Pestañas 2do Nivel</a></li>
-          <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Uñas-1er-Nivel-Curso">Uñas 1er Nivel</a></li>
-          <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Reposteria-Curso">Automaquillaje y Maquillaje</a></li>
-          <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Pasteles-Curso">Caracterizacion Basica</a></li>
-          <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Pasteles-Curso">Masaje Pindas y Auriculoterapia</a></li>
-          <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Barberia-Curso">Barberia</a></li>
-          <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Barberia-Curso">Pasteles</a></li>
+          <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Pestañas-2do-Nivel">Pestañas 2do Nivel</a></li>
+          <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Uñas-1er-Nivel">Uñas 1er Nivel</a></li>
+          <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Auto-Maquillaje">Automaquillaje y Maquillaje</a></li>
+          <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Caracterizacion-Basica">Caracterizacion Basica</a></li>
+          <li><a class="dropdown-item" href="/Tecsum-Web-Prueba/Cursos/Masaje-Pindas">Masaje Pindas y Auriculoterapia</a></li>
           
 
           
@@ -189,8 +186,17 @@
                         <li>📆 Viernes 12 de julio</li>
                     
                 </ul>
-                <h4>Horario</h4>
-                <p>🕐 3 a 6 PM</p>
+                <h4>Duración</h4>
+                <ul>
+                        <li>📆 1 clase</li>
+                    
+                </ul> 
+                <h4>Horarios</h4>
+               <ul>
+                    
+                        <li>🕑 3 a 6 PM</li>
+                    
+                </ul>
                 <h4>Incluye</h4>
                 <ul>
                     
@@ -200,7 +206,7 @@
                     
                 </ul>
                 <h4>Nota</h4>
-                <p>Para tomar el curso deberás traer:</p>
+                <p> Para brindarte una mayor información, comunícate vía WhatsApp | Para tomar el curso deberás traer:</p>
                 <ul>
                     
                         <li>Mandil</li>
@@ -214,11 +220,11 @@
                 
                 
 <h3>Temario</h3>
-<ul>
+<ul style="list-style: none; padding-left:0px">
   <li>♨ Elaboración de la masa.</li>
   <li>♨ TIPS.</li>
   <li>PRODUCTOS A ELABORAR:</li>
-  <ul>
+  <ul style="list-style: none; padding-left:0px">
     <li>👨🏼‍🍳 Volovan</li>
     <li>👩🏻‍🍳 Empanadas</li>
     <li>🧑🏼‍🍳 Peinetas</li>
@@ -232,9 +238,95 @@
   </ul>
 </ul>
 
-                <a href="/Tecsum-Web-Prueba/Inscribete" class="btn btn-custom-blue w-100">Solicita Información</a>
+                
             </div>
         </div>
+      <div class="container py-5">
+    <div class="row">
+        <!-- Contenedor con fondo para imagen y formulario -->
+        <div class="col-12 col-md-10 mx-auto bg-light p-4 rounded shadow">
+            <div class="row">
+                <!-- Columna de imagen -->
+                <div class="col-12 col-md-6 mb-4 mb-md-0 ">
+                    <img src="/Tecsum-Web-Prueba/img/Contact.webp" class="img-fluid img-form" alt="Contacto">
+                </div>
+                <!-- Columna de formulario -->
+                <div class="col-12 col-md-6">
+                    <h2 class="text-center">Contáctanos</h2>
+                    <form method="post" action="." id="contact-form" name="contact-form">
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required="">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="apellido" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required="">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo Electrónico" required="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Número de Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Número de Teléfono" pattern="[0-9]{10}" required="">
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-6">
+                                <label for="plantel" class="form-label">Plantel que desea</label>
+                                <select class="form-select" id="plantel" name="plantel" required="">
+                                    <option value="" selected="" disabled="">Selecciona un plantel</option>
+                                    <option value="Naucalpan">Naucalpan</option>
+                                    <option value="Tlalnepantla">Tlalnepantla</option>
+                                    <!-- <option value="Nicolás Romero">Nicolás Romero</option> -->
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <label for="oferta" class="form-label">Oferta Educativa Deseada</label>
+                                <select class="form-select" id="oferta" name="oferta" required="">
+                                    <option value="" selected="" disabled="">Selecciona una oferta educativa</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-6">
+                                <label for="carrera" class="form-label">Carrera que te interesa</label>
+                                <select class="form-select" id="carrera" name="carrera" required="">
+                                    <option value="" selected="" disabled="">Selecciona una carrera</option>
+                                </select>
+                                <!-- Campo oculto para la fecha -->
+                                <input type="hidden" id="fecha" name="fecha">
+                                <input type="hidden" id="hora" name="hora">
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-custom-blue">Solicitar Información</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="formModalLabel">Formulario Enviado Correctamente</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¡Muchas Gracias! Pronto nos pondremos en contacto contigo.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="module" src="/Tecsum-Web-Prueba/js/main.js"></script>
+<script type="module" src="/Tecsum-Web-Prueba/js/GoogleSheets.js"></script>
     </div>
     <footer class="bg-custom-dark-blue text-light py-4">
     <div class="container-fluid">
