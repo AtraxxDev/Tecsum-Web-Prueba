@@ -15,13 +15,16 @@ export function initializeForm() {
                         { value: 'Gastronomia', text: 'Gastronomía' }
                     ]
                 },
-                cursos: {
-                    regulares: [
-                        { value: 'Curso 1', text: 'Curso 1' },
-                        { value: 'Curso 2', text: 'Curso 2' }
-                    ],
-                    diplomados: []
-                },
+                // cursos: {
+                //     regulares: [
+                //         { value: 'Curso 1', text: 'Curso 1' },
+                //         { value: 'Curso 2', text: 'Curso 2' },
+                //         { value: 'Curso 5', text: 'Curso 5' },
+                //         { value: 'Curso 6', text: 'Curso 6' },
+                //         { value: 'Curso 7', text: 'Curso 7' }
+                //     ],
+                //     // El apartado diplomados ha sido eliminado aquí
+                // },
                 especialidades: [
                     { value: 'Asistente Educativo', text: 'Asistente Educativo' },
                     { value: 'Ingles', text: 'Inglés' },
@@ -43,23 +46,26 @@ export function initializeForm() {
                     ],
                     diplomados: []
                 },
-                cursos: {
-                    regulares: [
-                        { value: 'Curso 3', text: 'Curso 3' },
-                        { value: 'Curso 4', text: 'Curso 4' }
-                    ],
-                    diplomados: [
-                        { value: 'Asistente Educativo', text: 'Asistente Educativo' },
-                        { value: 'Ingles', text: 'Inglés' },
-                        { value: 'Gastronomia', text: 'Gastronomía' },
-                        { value: 'Dibujo Publicitario', text: 'Dibujo Publicitario' },
-                        { value: 'Cultora de Beleza', text: 'Cultora de Beleza' },
-                        { value: 'Contabilidad', text: 'Contabilidad' },
-                        { value: 'Programación', text: 'Programación' },
-                        { value: 'Reparacion de Computadoras', text: 'Reparacion de Computadoras' }
-                    ]
-                },
-                especialidades: []
+                // cursos: {
+                //     regulares: [
+                //         { value: 'Curso 3', text: 'Curso 3' },
+                //         { value: 'Curso 4', text: 'Curso 4' },
+                //         { value: 'Curso 8', text: 'Curso 8' },
+                //         { value: 'Curso 9', text: 'Curso 9' },
+                //         { value: 'Curso 10', text: 'Curso 10' }
+                //     ],
+                   
+                // },
+                especialidades: [
+                    { value: 'Asistente Educativo', text: 'Asistente Educativo' },
+                    { value: 'Ingles', text: 'Inglés' },
+                    { value: 'Gastronomia', text: 'Gastronomía' },
+                    { value: 'Dibujo Publicitario', text: 'Dibujo Publicitario' },
+                    { value: 'Cultora de Beleza', text: 'Cultora de Beleza' },
+                    { value: 'Contabilidad', text: 'Contabilidad' },
+                    { value: 'Programación', text: 'Programación' },
+                    { value: 'Reparacion de Computadoras', text: 'Reparacion de Computadoras' }
+                ]
             }
         };
 
@@ -71,7 +77,7 @@ export function initializeForm() {
             const selectedPlantel = plantelSelect.value;
             const ofertas = carrerasPorPlantel[selectedPlantel] || {
                 bachilleratos: { tecnologicos: [], diplomados: [] },
-                cursos: { regulares: [], diplomados: [] },
+                cursos: { regulares: [] },
                 especialidades: []
             };
 
@@ -87,21 +93,19 @@ export function initializeForm() {
                 ofertaSelect.appendChild(option);
             }
 
-
             if (ofertas.especialidades.length > 0) {
                 const option = document.createElement('option');
-                option.value = 'especialidades';
-                option.text = 'Especialidades';
+                option.value = 'Especialidad';
+                option.text = 'Especialidades/Diplomados';
                 ofertaSelect.appendChild(option);
             }
 
-            
-            if (ofertas.cursos.regulares.length > 0 || ofertas.cursos.diplomados.length > 0) {
-                const option = document.createElement('option');
-                option.value = 'cursos';
-                option.text = 'Cursos y Diplomados';
-                ofertaSelect.appendChild(option);
-            }
+            // if (ofertas.cursos.regulares.length > 0) {
+            //     const option = document.createElement('option');
+            //     option.value = 'cursos';
+            //     option.text = 'Cursos';
+            //     ofertaSelect.appendChild(option);
+            // }
         });
 
         ofertaSelect.addEventListener('change', function () {
@@ -137,7 +141,8 @@ export function initializeForm() {
                     });
                     carreraSelect.appendChild(optgroupDiplomados);
                 }
-            } else if (selectedOferta === 'cursos') {
+            } 
+            else if (selectedOferta === 'cursos') {
                 const cursos = carrerasPorPlantel[selectedPlantel].cursos;
                 if (cursos.regulares.length > 0) {
                     const optgroupRegulares = document.createElement('optgroup');
@@ -150,24 +155,17 @@ export function initializeForm() {
                     });
                     carreraSelect.appendChild(optgroupRegulares);
                 }
-                if (cursos.diplomados.length > 0) {
-                    const optgroupDiplomados = document.createElement('optgroup');
-                    optgroupDiplomados.label = 'Diplomados';
-                    cursos.diplomados.forEach(carrera => {
-                        const option = document.createElement('option');
-                        option.value = carrera.value;
-                        option.text = carrera.text;
-                        optgroupDiplomados.appendChild(option);
-                    });
-                    carreraSelect.appendChild(optgroupDiplomados);
-                }
-            } else {
-                carreras.forEach(carrera => {
+            } else if (selectedOferta === 'Especialidad') {
+                const especialidades = carrerasPorPlantel[selectedPlantel].especialidades;
+                const optgroupEspecialidades = document.createElement('optgroup');
+                optgroupEspecialidades.label = 'Especialidades/Diplomados';
+                especialidades.forEach(carrera => {
                     const option = document.createElement('option');
                     option.value = carrera.value;
                     option.text = carrera.text;
-                    carreraSelect.appendChild(option);
+                    optgroupEspecialidades.appendChild(option);
                 });
+                carreraSelect.appendChild(optgroupEspecialidades);
             }
         });
     });

@@ -1,6 +1,4 @@
 /* Importación de fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
 
 /* Estilos generales */
 body {
@@ -18,6 +16,11 @@ p {
     font-size: 1.4rem;
 }
 
+.icon-egreso{
+    width: 2rem;
+    height: 2rem;
+}
+
 ul,ol{
     font-size: 1.4rem;
 }
@@ -30,6 +33,11 @@ ul,ol{
     font-size: 1.2rem;
 
 }
+
+.footer-social p{
+    font-size: 1.1rem;
+}
+
 
 /* skill */
 
@@ -82,15 +90,7 @@ ul,ol{
     color: white; /* Cambia el color del texto según tu diseño */
     font-size: 5rem; /* Tamaño de fuente ajustable según necesites */
 }
-@media (max-width: 768px) {
-    .banner-text h1{
-        font-size: 4rem; /* Tamaño de fuente para dispositivos con ancho máximo de 600px */
-    }
 
-    .banner-text h2 {
-        font-size: 3rem; /* Tamaño de fuente ajustable según necesites */
-    }
-}
 
 
 
@@ -108,6 +108,7 @@ ul,ol{
     display: block;
     object-fit: cover;
     filter: brightness(50%);
+    object-position: center;
 }
 
 /* Carrusel */
@@ -118,11 +119,7 @@ ul,ol{
     height: 100%; /* Altura automática para mantener la proporción */
 }
 
-@media (max-width: 768px) {
-    .carousel-vh img{
-        height: auto; /* En dispositivos móviles, altura automática */
-    }
-}
+
 
 .carousel-indicators button {
     background-color: #000;
@@ -167,18 +164,37 @@ ul,ol{
 .iframe-container {
     position: relative;
     overflow: hidden;
-    padding-bottom: 100%; /* Proporción 16:9 (9/16 = 0.5625) */
     height: 0;
-  }
+}
 
-  .iframe-container iframe {
+.iframe-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border: none;
-  }
+}
+
+/* Proporción 4:5 para vertical */
+.iframe-container.vertical {
+    padding-bottom: 125%; /* 4/5 = 0.8 => 80% pero se invierte */
+}
+
+/* Proporción 16:9 para horizontal */
+.iframe-container.horizontal {
+    padding-bottom: 56.25%; /* 9/16 = 0.5625 => 56.25% */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 767.98px) {
+    .iframe-container.vertical {
+        padding-bottom: 150%; /* Ajuste para mayor altura en móviles */
+    }
+    .iframe-container.horizontal {
+        padding-bottom: 75%; /* Ajuste para mayor altura en móviles */
+    }
+}
 
 /* Estilos popup-image */
 .image {
@@ -281,7 +297,7 @@ ul,ol{
 /* Estilos para subtitulos */
 
 .subtitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -310,29 +326,75 @@ h3{
     height: 96px;
 }
 
+/* Planteles imagen */
+
+.img-plantel{
+    width: 25rem;
+    height: 20rem;
+    object-fit: cover;
+}
+
 /* Estilos de imagen */
 .img-fit-container {
-    max-height: 400px;
-    overflow: hidden;
+    height: 400px;
 }
 
 .img-fit {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
+    object-position: 50% 40%;
 }
 
 .img-form {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
-.img-Select{
-   border-radius: 5%;
+.img-Select {
+    width: auto;  /* Cambia este valor según tus necesidades */
+    height: 220px; /* Cambia este valor según tus necesidades */
+    object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+    border-radius: 5%;
 }
+
+.img-Select-Plantel {
+    width: 35rem;  /* Cambia este valor según tus necesidades */
+    height: 25rem; /* Cambia este valor según tus necesidades */
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+.img-Comunidad{
+    width: 10rem;  /* Cambia este valor según tus necesidades */
+    height: 10rem; /* Cambia este valor según tus necesidades */
+    object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+    border-radius: 5%;
+}
+
+
+.img-Galeria{
+    width: 30rem;  /* Cambia este valor según tus necesidades */
+    height: 20rem; /* Cambia este valor según tus necesidades */
+    object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+    border-radius: 5%;
+}
+
+.img-Carrera{
+    width: 100%;  /* Cambia este valor según tus necesidades */
+    height: 30rem; /* Cambia este valor según tus necesidades */
+    object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+    border-radius: 3%;
+}
+  
 
 .img-Select:hover{
+    animation: select 0.05s ease-in-out both;
+}
+
+.img-Select-Plantel:hover{
     animation: select 0.05s ease-in-out both;
 }
 
@@ -348,8 +410,8 @@ h3{
 }
 
 .rounded-image {
-    width: 150px;
-    height: 150px;
+    width: 6rem;
+    height: 6rem;
     object-fit: cover;
     margin: 0 auto 20px; /* Center the image and add bottom margin */
 }
@@ -402,6 +464,154 @@ h3{
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 768px) {
+    .carousel-vh img{
+        height: auto; /* En dispositivos móviles, altura automática */
+    }
+
+        .banner-text h1{
+        font-size: 3rem; /* Tamaño de fuente para dispositivos con ancho máximo de 600px */
+    }
+
+    .banner-text h2 {
+        font-size: 3rem; /* Tamaño de fuente ajustable según necesites */
+    }
+
+    .footer-social p{
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: 1.1rem;
+    }
+    .titleFont {
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    h3{
+        font-size: 1.6rem;
+    }
+    ul{
+        font-size: 1.2rem;
+    }
+    .skill-container h4{
+        font-size: 1.3rem;
+    }
+    .img-Galeria{
+        width: 10rem;  /* Cambia este valor según tus necesidades */
+        height: 10rem; /* Cambia este valor según tus necesidades */
+        object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+        border-radius: 5%;
+    }
+    .img-Select {
+        width: auto;  /* Cambia este valor según tus necesidades */
+        height: 12rem; /* Cambia este valor según tus necesidades */
+        object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+        border-radius: 5%;
+    }
+
+    .img-Select-Plantel {
+        width: 25rem;  /* Cambia este valor según tus necesidades */
+        height: 15rem; /* Cambia este valor según tus necesidades */
+        border-radius: 5%;
+        object-fit: cover;
+    }
+    .icon {
+        width: 70px;
+        height: 70px;
+    }
+    .subtitle {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .img-fit-container {
+        max-height: 200px;
+        
+    }
+
+    .rounded-image {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .img-plantel{
+        width: 20rem;
+        height: 15rem;
+    }
+
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-button img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .whatsapp-popup {
+        width: 90%;
+        bottom: 70px;
+        right: 5%;
+        height: auto;
+        max-height: 70vh;
+    }
+
+    .whatsapp-header {
+        height: 5rem;
+    }
+
+    .whatsapp-header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .whatsapp-header p {
+        font-size: 1rem;
+    }
+
+    .Horizontal-Card img {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+
+    .Horizontal-Card-content h3 {
+        font-size: 1em;
+    }
+
+    .Horizontal-Card {
+        padding: 10px;
+    }
+
+    .Horizontal-Card-content {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .whatsapp-popup {
+        width: 90%; /* Ajusta el ancho del popup al 90% del ancho de la pantalla */
+        bottom: 70px; /* Sube un poco el popup para darle espacio al botón */
+        right: 5%; /* Centra el popup en la pantalla */
+        left: 5%; /* Ajusta el margen izquierdo */
+        height: auto; /* Permite que el contenido determine la altura */
+        max-height: 70vh; /* Limita la altura a un máximo de 70% del alto de la ventana */
+    }
+
+    .whatsapp-popup.show {
+        opacity: 1;
+        transform: translateY(0);
+        width: 90%; /* Mantiene el popup centrado y ajustado en pantallas pequeñas */
+        right: 5%;
+        left: 5%;
+        bottom: 70px;
+    }
+
 }
 
 @media (min-width: 992px) {
