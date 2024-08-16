@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -7,7 +8,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="https://tecsum.edu.mx/Images/Iconos/Logos/Tecsum_Logo.webp" type="image/x-icon">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/style.css">
     </head>
@@ -36,7 +36,7 @@
                         <p>Como egresado en {{ name_carrera }} obtendrás las competencias y habilidades necesarias para:</p>
                         <ul>
                             {% for item in list_egreso %}
-                                <li><img src="https://tecsum.edu.mx/Images/Iconos/Ventajas/Check.png" alt="Check" class="icon-egreso">{{ item.name }}</li>
+                                <li> ✅{{ item.name }}</li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -52,7 +52,7 @@
                         <h3>Algunos de los perfiles con mayor demanda laboral son:</h3>
                         <ul>
                             {% for item in list_campo %}
-                                <li><img src="https://tecsum.edu.mx/Images/Iconos/Ventajas/Check.png" alt="Check" class="icon-egreso"> » {{ item.name }}</li>
+                                <li> ✅ » {{ item.name }}</li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -62,7 +62,7 @@
                         <p>{{ text_Beneficios }}</p>
                         <ul>
                             {% for item in list_Beneficios %}
-                                <li><img src="https://tecsum.edu.mx/Images/Iconos/Ventajas/Check.png" alt="Check" class="icon-egreso"> » {{ item.name }}</li>
+                                <li> ✅ » {{ item.name }}</li>
                             {% endfor %}
                         </ul>
                     </div>
