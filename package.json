@@ -7,7 +7,7 @@
     "start": "npx @11ty/eleventy --serve --port=7777",
     "clean": "rmdir /s /q docs",
     "deploy": "npx @11ty/eleventy --pathprefix=/",
-    "deploy-subdomain": "npx @11ty/eleventy --pathprefix=/Tecsum-Web-Prueba"
+    "deploy-subdomain": "npx @11ty/eleventy --pathprefix=/Tecsum-Web-Prueba/"
   },
   "keywords": [],
   "author": "",
