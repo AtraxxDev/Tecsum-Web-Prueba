@@ -14,7 +14,7 @@
 <body>
     {% include "header.njk" %}
     <div class="banner-fluid">
-        <img src="{{ banner_image }}" class="img-fluid banner-image" alt="">
+        <img src="{{ banner_image }}" class="img-fluid banner-image" loading="lazy" alt="">
         <div class="banner-text">
             <h1>{{ banner_text }}</h1>
         </div>
@@ -32,7 +32,7 @@
                     <div class="carousel-inner " style="height:100%;"">
                         {% for image in carousel_images %}
                             <div class="carousel-item {{ 'active' if loop.index0 == 0 }} carousel-vh " style="height:100%;">
-                                <img src="{{ image.url }}" class="d-block w-100" alt="{{ image.alt }}">
+                                <img src="{{ image.url }}" class="d-block w-100" loading="lazy" alt="{{ image.alt }}">
                             </div>
                         {% endfor %}
                     </div>

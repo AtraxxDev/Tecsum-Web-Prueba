@@ -56,16 +56,16 @@ export function initializeForm() {
                 //     ],
                    
                 // },
-                especialidades: [
-                    { value: 'Asistente Educativo', text: 'Asistente Educativo' },
-                    { value: 'Ingles', text: 'Inglés' },
-                    { value: 'Gastronomia', text: 'Gastronomía' },
-                    { value: 'Dibujo Publicitario', text: 'Dibujo Publicitario' },
-                    { value: 'Cultora de Beleza', text: 'Cultora de Beleza' },
-                    { value: 'Contabilidad', text: 'Contabilidad' },
-                    { value: 'Programación', text: 'Programación' },
-                    { value: 'Reparacion de Computadoras', text: 'Reparacion de Computadoras' }
-                ]
+                // especialidades: [
+                //     { value: 'Asistente Educativo', text: 'Asistente Educativo' },
+                //     { value: 'Ingles', text: 'Inglés' },
+                //     { value: 'Gastronomia', text: 'Gastronomía' },
+                //     { value: 'Dibujo Publicitario', text: 'Dibujo Publicitario' },
+                //     { value: 'Cultora de Beleza', text: 'Cultora de Beleza' },
+                //     { value: 'Contabilidad', text: 'Contabilidad' },
+                //     { value: 'Programación', text: 'Programación' },
+                //     { value: 'Reparacion de Computadoras', text: 'Reparacion de Computadoras' }
+                // ]
             }
         };
 

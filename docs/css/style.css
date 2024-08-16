@@ -539,6 +539,10 @@ h3{
     height: 100%;
 }
 
+.inf-whatsapp h4{
+    color: #4CAF50;
+    font-weight: bold;
+}
 
 
 /* Estilos popup-image */

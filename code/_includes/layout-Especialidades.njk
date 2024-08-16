@@ -15,7 +15,7 @@
         {% include "header.njk" %}
         <main>
             <div class="banner-fluid">
-                <img src="{{ banner_image }}" class="img-fluid banner-image-Esp" alt="">
+                <img src="{{ banner_image }}" class="img-fluid banner-image-Esp" loading="lazy" alt="">
                 <div class="banner-text">
                     <h2>{{ banner_text }}</h2>
                 </div>
@@ -41,7 +41,7 @@
                         </ul>
                     </div>
                     <div class="image-section col-12 col-md-6">
-                        <img src="{{ img_egreso }}" alt="Perfil de Egreso">
+                        <img src="{{ img_egreso }}" loading="lazy" alt="Perfil de Egreso">
                     </div>
                 </div>
                 <!-- Campo laboral -->
@@ -72,22 +72,27 @@
                     <div class="table-container text-center">
                         <div class="row py-3">
                             <div class="col-6 col-md-4">
-                                <img src="https://tecsum.edu.mx/Images/Iconos/Ventajas/Duracion.png" alt="Duración Imagen" class="rounded-image">
+                                <img src="https://tecsum.edu.mx/Images/Iconos/Ventajas/Duracion.png" alt="Duración Imagen" loading="lazy" class="rounded-image">
                                 <h4>Duración</h4>
                                 <p>{{ duration }}</p>
                             </div>
                             <div class="col-6 col-md-4">
-                                <img src="https://tecsum.edu.mx/Images/Iconos/Ventajas/Modalidad.png" alt="Modalidad Imagen" class="rounded-image">
+                                <img src="https://tecsum.edu.mx/Images/Iconos/Ventajas/Modalidad.png" alt="Modalidad Imagen" loading="lazy" class="rounded-image">
                                 <h4>Modalidad</h4>
                                 <p>{{ modality }}</p>
                             </div>
                             <div class="col-12 col-md-4">
-                                <img src="https://tecsum.edu.mx/Images/Iconos/Ventajas/Inicio-Curso.png" alt="Inicio de Curso Imagen" class="rounded-image">
+                                <img src="https://tecsum.edu.mx/Images/Iconos/Ventajas/Inicio-Curso.png" alt="Inicio de Curso Imagen" loading="lazy" class="rounded-image">
                                 <h4>Inicio de Curso</h4>
                                 <p>{{ course_start }}</p>
                             </div>
                         </div>
                     </div>
+                    <div class="row py-5 inf-whatsapp">
+                    <div class="col-12">
+                        <h4 class="text-center">Solicita información via Whatsapp</h4>
+                    </div>
+                </div>
                 </div>
 
                 {# <div class="text-center p-5">
@@ -105,7 +110,7 @@
                 <div class="row py-3 text-center">
                         {% for plantel in planteles %}
                             <div class="col-12 col-lg-4 mb-3">
-                                <img src="{{ site[plantel.name] }}" class="img-fluid rounded" alt="{{ plantel.name }}">
+                                <img src="{{ site[plantel.name] }}" class="img-fluid rounded" loading="lazy" alt="{{ plantel.name }}">
                                 <h5 class="mt-2">{{ plantel.name }}</h5>
                             </div>
                         {% endfor %}
