@@ -12,8 +12,9 @@ export function initializeForm() {
                     diplomados: [
                         { value: 'Asistente Educativo', text: 'Asistente Educativo' },
                         { value: 'Belleza', text: 'Belleza' },
-                        { value: 'Gastronomia', text: 'Gastronomía' }
-                    ]
+                        { value: 'Gastronomía', text: 'Gastronomía' }
+                    ],
+
                 },
                 // cursos: {
                 //     regulares: [
@@ -27,14 +28,29 @@ export function initializeForm() {
                 // },
                 especialidades: [
                     { value: 'Asistente Educativo', text: 'Asistente Educativo' },
-                    { value: 'Ingles', text: 'Inglés' },
-                    { value: 'Gastronomia', text: 'Gastronomía' },
+                    { value: 'Inglés', text: 'Inglés' },
+                    { value: 'Gastronomía', text: 'Gastronomía' },
                     { value: 'Dibujo Publicitario', text: 'Dibujo Publicitario' },
-                    { value: 'Cultora de Beleza', text: 'Cultora de Beleza' },
+                    { value: 'Cultora de Belleza', text: 'Cultora de Belleza' },
                     { value: 'Contabilidad', text: 'Contabilidad' },
                     { value: 'Programación', text: 'Programación' },
-                    { value: 'Reparacion de Computadoras', text: 'Reparacion de Computadoras' }
-                ]
+                    { value: 'Mtto. de Computadoras', text: 'Mtto. de Computadoras' }
+                ],
+
+                licenciaturas: [
+                    { value: 'Psicopedagogía', text: 'Psicopedagogía' },
+                    { value: 'Arquitectura', text: 'Arquitectura' },
+                    { value: 'Mercadotecnia Digital', text: 'Mercadotecnia Digital' },
+                    { value: 'Administración', text: 'Administración' },
+                    { value: 'Criminalística', text: 'Criminalística' },
+                    { value: 'Contaduría', text: 'Contaduría' },
+                    { value: 'Negocios Internacionales', text: 'Negocios Internacionales' },
+                    { value: 'Ingeniería Mecatrónica', text: 'Ingeniería Mecatrónica' },
+                    { value: 'Ingeniería en Sistemas Computacionales', text: 'Ingeniería en Sistemas Computacionales' }
+                ],
+
+
+                
             },
             'Tlalnepantla': {
                 bachilleratos: {
@@ -56,16 +72,19 @@ export function initializeForm() {
                 //     ],
                    
                 // },
-                // especialidades: [
-                //     { value: 'Asistente Educativo', text: 'Asistente Educativo' },
-                //     { value: 'Ingles', text: 'Inglés' },
-                //     { value: 'Gastronomia', text: 'Gastronomía' },
-                //     { value: 'Dibujo Publicitario', text: 'Dibujo Publicitario' },
-                //     { value: 'Cultora de Beleza', text: 'Cultora de Beleza' },
-                //     { value: 'Contabilidad', text: 'Contabilidad' },
-                //     { value: 'Programación', text: 'Programación' },
-                //     { value: 'Reparacion de Computadoras', text: 'Reparacion de Computadoras' }
-                // ]
+                especialidades: [],
+                licenciaturas: [
+                    { value: 'Psicopedagogía', text: 'Psicopedagogía' },
+                    { value: 'Arquitectura', text: 'Arquitectura' },
+                    { value: 'Mercadotecnia Digital', text: 'Mercadotecnia Digital' },
+                    { value: 'Administración', text: 'Administración' },
+                    { value: 'Criminalística', text: 'Criminalística' },
+                    { value: 'Contaduría', text: 'Contaduría' },
+                    { value: 'Negocios Internacionales', text: 'Negocios Internacionales' },
+                    { value: 'Ingeniería Mecatrónica', text: 'Ingeniería Mecatrónica' },
+                    { value: 'Ingeniería en Sistemas Computacionales', text: 'Ingeniería en Sistemas Computacionales' }
+                ],
+
             }
         };
 
@@ -73,13 +92,17 @@ export function initializeForm() {
         const ofertaSelect = document.getElementById('oferta');
         const carreraSelect = document.getElementById('carrera');
 
+    
         plantelSelect.addEventListener('change', function () {
             const selectedPlantel = plantelSelect.value;
             const ofertas = carrerasPorPlantel[selectedPlantel] || {
                 bachilleratos: { tecnologicos: [], diplomados: [] },
                 cursos: { regulares: [] },
-                especialidades: []
+                especialidades: [],
+                licenciaturas: []
             };
+
+            
 
             // Limpiar las opciones actuales
             ofertaSelect.innerHTML = '<option value="" selected disabled>Selecciona una oferta educativa</option>';
@@ -100,6 +123,13 @@ export function initializeForm() {
                 ofertaSelect.appendChild(option);
             }
 
+            if (ofertas.licenciaturas.length > 0) {
+                const option = document.createElement('option');
+                option.value = 'licenciaturas';
+                option.text = 'Licenciaturas / Ingenierías';
+                ofertaSelect.appendChild(option);
+            }
+
             // if (ofertas.cursos.regulares.length > 0) {
             //     const option = document.createElement('option');
             //     option.value = 'cursos';
@@ -111,11 +141,10 @@ export function initializeForm() {
         ofertaSelect.addEventListener('change', function () {
             const selectedPlantel = plantelSelect.value;
             const selectedOferta = ofertaSelect.value;
-            const carreras = carrerasPorPlantel[selectedPlantel][selectedOferta] || [];
-
+        
             // Limpiar las opciones actuales del select de carrera
             carreraSelect.innerHTML = '<option value="" selected disabled>Selecciona una carrera</option>';
-
+        
             // Añadir las nuevas opciones de carrera según la oferta seleccionada
             if (selectedOferta === 'bachilleratos') {
                 const bachilleratos = carrerasPorPlantel[selectedPlantel].bachilleratos;
@@ -141,19 +170,18 @@ export function initializeForm() {
                     });
                     carreraSelect.appendChild(optgroupDiplomados);
                 }
-            } 
-            else if (selectedOferta === 'cursos') {
-                const cursos = carrerasPorPlantel[selectedPlantel].cursos;
-                if (cursos.regulares.length > 0) {
-                    const optgroupRegulares = document.createElement('optgroup');
-                    optgroupRegulares.label = 'Cursos';
-                    cursos.regulares.forEach(carrera => {
+            } else if (selectedOferta === 'licenciaturas') {
+                const licenciaturas = carrerasPorPlantel[selectedPlantel].licenciaturas;
+                if (licenciaturas.length > 0) {
+                    const optgroupLicenciaturas = document.createElement('optgroup');
+                    optgroupLicenciaturas.label = 'Licenciaturas / Ingenierías';
+                    licenciaturas.forEach(carrera => {
                         const option = document.createElement('option');
                         option.value = carrera.value;
                         option.text = carrera.text;
-                        optgroupRegulares.appendChild(option);
+                        optgroupLicenciaturas.appendChild(option);
                     });
-                    carreraSelect.appendChild(optgroupRegulares);
+                    carreraSelect.appendChild(optgroupLicenciaturas);
                 }
             } else if (selectedOferta === 'Especialidad') {
                 const especialidades = carrerasPorPlantel[selectedPlantel].especialidades;
@@ -168,5 +196,8 @@ export function initializeForm() {
                 carreraSelect.appendChild(optgroupEspecialidades);
             }
         });
+        
+       
+
     });
 }

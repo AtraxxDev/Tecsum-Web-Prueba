@@ -5,9 +5,22 @@ const scriptURLs = {
 };
 
 const form = document.forms['contact-form'];
+const submitButton = form.querySelector('button[type="submit"]'); // Selecciona el botón de submit
+
 
 form.addEventListener('submit', e => {
     e.preventDefault();
+
+    // Deshabilitar el botón para evitar clics múltiples
+    submitButton.classList.add('disabled');
+    submitButton.setAttribute('disabled', true);
+
+    // Cambiar el texto del botón a "Enviando formulario..."
+    submitButton.textContent = 'Enviando formulario...';
+
+    // Cambiar el color del botón a "btn-success"
+    submitButton.classList.remove('btn-custom-blue');  // Eliminar el color original (o el que tenga)
+    submitButton.classList.add('btn-success');
 
     // Obtener la fecha y hora actual
     const currentDate = new Date();
@@ -35,6 +48,12 @@ form.addEventListener('submit', e => {
     // Obtener la URL del script correspondiente al plantel seleccionado
     const scriptURL = scriptURLs[selectedPlantel];
 
+    // Obtener el modal
+    const modalElement = document.getElementById('formModal');
+
+    // Desactivar el modal para evitar que el foco quede en él
+    modalElement.setAttribute('inert', '');  // Inhabilita la interacción con el modal
+
     // Enviar los datos del formulario a la URL del script correspondiente
     fetch(scriptURL, { method: 'POST', body: formData })
         .then(response => {
@@ -44,12 +63,37 @@ form.addEventListener('submit', e => {
                 });
                 myModal.show();
                 form.reset(); // Restablecer el formulario después de enviarlo correctamente
-                console.log("Se envió")
+                console.log("Se envió");
+                
+                // Rehabilitar el modal (quitar el atributo inert)
+                modalElement.removeAttribute('inert');
+
+                // Agregar evento para cuando el modal se cierre
+                modalElement.addEventListener('hidden.bs.modal', function () {
+                    // Rehabilitar el botón después de cerrar el modal
+                    submitButton.classList.remove('disabled');
+                    submitButton.removeAttribute('disabled');
+                    // Cambiar el color del botón a "btn-success"
+                    submitButton.classList.remove('btn-success');  // Eliminar el color original (o el que tenga)
+                    submitButton.classList.add('btn-custom-blue');
+                    // Restaurar el texto del botón a "Solicitar Información"
+                    submitButton.textContent = 'Solicitar Información';
+                });
+                
+
             } else {
                 alert('Error al enviar el formulario');
             }
         })
-        .catch(error => console.error("Error!", error.message));
+        .catch(error => {
+            console.error("Error!", error.message);
+            // Asegúrate de habilitar el botón nuevamente si hay un error
+            submitButton.classList.remove('disabled');
+            submitButton.removeAttribute('disabled');
+
+            // Rehabilitar el modal en caso de error
+            modalElement.removeAttribute('inert');
+        });
 });
 
 // Función para formatear la fecha en formato dd/mm/yyyy
