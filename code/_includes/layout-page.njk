@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+              <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16973495648"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'AW-16973495648');
+        </script>
+
+        <!-- El resto de tu head -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title }}</title>
         <meta name="description" content="{{ description }}">
-        <meta property="og:image" content="https://tecsum.edu.mx/Images/Iconos/Logos/Tecsum_Logo.webp" />
+        <meta property="og:image" content="/img/Iconos/Logos/Tecsum_Logo.webp"/>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="https://tecsum.edu.mx/Images/Iconos/Logos/Tecsum_Logo.webp" type="image/x-icon">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="shortcut icon" href="/img/Iconos/Logos/Tecsum_Logo.webp" type="image/x-icon">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
+        
         {% include "header.njk" %}
-            <main>
-                {{ content | safe }}
-            </main>
+        <main>
+            {{ content | safe }}
+        </main>
         {% include "footer.njk" %}
         {% include "whatsapp-btn.njk" %}
-
-
-        
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
-            {# <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> #}
+        {# <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> #}
         <script type="module" src="/js/main.js"></script>
-        <!-- Google tag (gtag.js) --> 
-        <script async 
-        src="https://www.googletagmanager.com/gtag/js?id=AW-16973495648">
-        </script> 
-        <script> window.dataLayer = window.dataLayer || []; 
-                function gtag(){dataLayer.push(arguments);} 
-                gtag('js', new Date());
-                gtag('config', 'AW-16973495648'); 
-        </script>
     </body>
 </html>

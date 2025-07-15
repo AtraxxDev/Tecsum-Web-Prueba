@@ -39,18 +39,17 @@ export function initializeForm() {
 
                 licenciaturas: [
                     { value: 'Psicopedagogía', text: 'Psicopedagogía' },
-                    { value: 'Arquitectura', text: 'Arquitectura' },
                     { value: 'Mercadotecnia Digital', text: 'Mercadotecnia Digital' },
                     { value: 'Administración', text: 'Administración' },
                     { value: 'Criminalística', text: 'Criminalística' },
                     { value: 'Contaduría', text: 'Contaduría' },
+                    { value: 'Derecho', text: 'Derecho' },
                     { value: 'Negocios Internacionales', text: 'Negocios Internacionales' },
-                    { value: 'Ingeniería Mecatrónica', text: 'Ingeniería Mecatrónica' },
-                    { value: 'Ingeniería en Sistemas Computacionales', text: 'Ingeniería en Sistemas Computacionales' }
+                    { value: 'Ing. Sistemas Computacionales', text: 'Ing. Sistemas Computacionales' }
                 ],
 
 
-                
+
             },
             'Tlalnepantla': {
                 bachilleratos: {
@@ -60,7 +59,10 @@ export function initializeForm() {
                         { value: 'Programación', text: 'Programación' },
                         { value: 'Diseño Publicitario', text: 'Diseño Publicitario' }
                     ],
-                    diplomados: []
+                    diplomados: [
+                        { value: 'Asistente Educativo', text: 'Asistente Educativo' },
+                        { value: 'Belleza', text: 'Belleza' },
+                    ],
                 },
                 // cursos: {
                 //     regulares: [
@@ -70,20 +72,52 @@ export function initializeForm() {
                 //         { value: 'Curso 9', text: 'Curso 9' },
                 //         { value: 'Curso 10', text: 'Curso 10' }
                 //     ],
-                   
+
                 // },
                 especialidades: [],
                 licenciaturas: [
                     { value: 'Psicopedagogía', text: 'Psicopedagogía' },
-                    { value: 'Arquitectura', text: 'Arquitectura' },
+                    { value: 'Criminalística', text: 'Criminalística' },
+                    { value: 'Derecho', text: 'Derecho' },
+                    { value: 'Ing. Sistemas Computacionales', text: 'Ing. Sistemas Computacionales' }
+                ],
+
+
+            },
+            'Nicolás Romero': {
+                bachilleratos: {
+                    tecnologicos: [
+                        { value: 'Enfermería General', text: 'Enfermería General' },
+                        { value: 'Contabilidad', text: 'Contabilidad' },
+                        { value: 'Programación', text: 'Programación' },
+                        { value: 'Diseño Publicitario', text: 'Diseño Publicitario' }
+                    ],
+                    diplomados: [
+                        { value: 'Asistente Educativo', text: 'Asistente Educativo' },
+                        { value: 'Belleza', text: 'Belleza' },
+                    ],                },
+                // cursos: {
+                //     regulares: [
+                //         { value: 'Curso 3', text: 'Curso 3' },
+                //         { value: 'Curso 4', text: 'Curso 4' },
+                //         { value: 'Curso 8', text: 'Curso 8' },
+                //         { value: 'Curso 9', text: 'Curso 9' },
+                //         { value: 'Curso 10', text: 'Curso 10' }
+                //     ],
+
+                // },
+                especialidades: [],
+                licenciaturas: [
+                    { value: 'Psicopedagogía', text: 'Psicopedagogía' },
                     { value: 'Mercadotecnia Digital', text: 'Mercadotecnia Digital' },
                     { value: 'Administración', text: 'Administración' },
                     { value: 'Criminalística', text: 'Criminalística' },
                     { value: 'Contaduría', text: 'Contaduría' },
+                    { value: 'Derecho', text: 'Derecho' },
                     { value: 'Negocios Internacionales', text: 'Negocios Internacionales' },
-                    { value: 'Ingeniería Mecatrónica', text: 'Ingeniería Mecatrónica' },
-                    { value: 'Ingeniería en Sistemas Computacionales', text: 'Ingeniería en Sistemas Computacionales' }
+                    { value: 'Ing. Sistemas Computacionales', text: 'Ing. Sistemas Computacionales' }
                 ],
+
 
             }
         };
@@ -92,7 +126,7 @@ export function initializeForm() {
         const ofertaSelect = document.getElementById('oferta');
         const carreraSelect = document.getElementById('carrera');
 
-    
+
         plantelSelect.addEventListener('change', function () {
             const selectedPlantel = plantelSelect.value;
             const ofertas = carrerasPorPlantel[selectedPlantel] || {
@@ -102,7 +136,7 @@ export function initializeForm() {
                 licenciaturas: []
             };
 
-            
+
 
             // Limpiar las opciones actuales
             ofertaSelect.innerHTML = '<option value="" selected disabled>Selecciona una oferta educativa</option>';
@@ -141,10 +175,10 @@ export function initializeForm() {
         ofertaSelect.addEventListener('change', function () {
             const selectedPlantel = plantelSelect.value;
             const selectedOferta = ofertaSelect.value;
-        
+
             // Limpiar las opciones actuales del select de carrera
             carreraSelect.innerHTML = '<option value="" selected disabled>Selecciona una carrera</option>';
-        
+
             // Añadir las nuevas opciones de carrera según la oferta seleccionada
             if (selectedOferta === 'bachilleratos') {
                 const bachilleratos = carrerasPorPlantel[selectedPlantel].bachilleratos;
@@ -159,7 +193,7 @@ export function initializeForm() {
                     });
                     carreraSelect.appendChild(optgroupTecnologicos);
                 }
-                if (selectedPlantel === 'Naucalpan' && bachilleratos.diplomados.length > 0) {
+                if (bachilleratos.diplomados.length > 0) {
                     const optgroupDiplomados = document.createElement('optgroup');
                     optgroupDiplomados.label = 'Bachilleratos con Diplomados';
                     bachilleratos.diplomados.forEach(carrera => {
@@ -196,8 +230,8 @@ export function initializeForm() {
                 carreraSelect.appendChild(optgroupEspecialidades);
             }
         });
-        
-       
+
+
 
     });
 }

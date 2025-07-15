@@ -1,101 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <meta name="description" content="{{ description }}">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="https://tecsum.edu.mx/Images/Iconos/Logos/Tecsum_Logo.webp" type="image/x-icon">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    {% include "header.njk" %}
-    <div class="banner-fluid">
-        <img src="{{ banner_image }}" class="img-fluid banner-image" loading="lazy" alt="">
-        <div class="banner-text">
-            <h1>{{ banner_text }}</h1>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16973495648"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'AW-16973495648');
+        </script>
+
+        <!-- El resto de tu head -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+        <meta name="description" content="{{ description }}">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="shortcut icon" href="/img/Iconos/Logos/Tecsum_Logo.webp" type="image/x-icon">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        {% include "header.njk" %}
+        <div class="banner-fluid">
+            <img src="{{ banner_image }}" class="img-fluid banner-image" loading="lazy" alt="">
+            <div class="banner-text">
+                <h1>{{ banner_text }}</h1>
+            </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row py-3">
-            <div class="col-12 col-md-7">
-                <!-- Carrusel de imágenes -->
-                <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel" style="height:100%;">
-                    <div class="carousel-indicators">
-                        {% for i in range(carousel_images | length) %}
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ i }}" class="{{ 'active' if i == 0 }}" aria-current="true" aria-label="Slide {{ i + 1 }}"></button>
-                        {% endfor %}
+        <div class="container">
+            <div class="row py-3">
+                <div
+                    class="col-12 col-md-7">
+                    <!-- Carrusel de imágenes -->
+                    <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel" style="height:100%;">
+                        <div class="carousel-indicators">
+                            {% for i in range(carousel_images | length) %}
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ i }}" class="{{ 'active' if i == 0 }}" aria-current="true" aria-label="Slide {{ i + 1 }}"></button>
+                            {% endfor %}
+                        </div>
+                        <div class="carousel-inner " style="height:100%;" ">
+                            {% for image in carousel_images %}
+                                <div class="carousel-item {{ 'active' if loop.index0 == 0 }} carousel-vh " style="height:100%;">
+                                    <img src="{{ image.url }}" class="d-block w-100" loading="lazy" alt="{{ image.alt }}">
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <div class="carousel-inner " style="height:100%;"">
-                        {% for image in carousel_images %}
-                            <div class="carousel-item {{ 'active' if loop.index0 == 0 }} carousel-vh " style="height:100%;">
-                                <img src="{{ image.url }}" class="d-block w-100" loading="lazy" alt="{{ image.alt }}">
-                            </div>
+                </div>
+                <div
+                    class="col-12 col-md-5 py-3 py-md-1">
+                    <!-- Información del curso -->
+                    <h2>{{ name_carrera }}</h2>
+                    <p>{{ description_short }}</p>
+                    <h4>Inicios</h4>
+                    <ul>
+                        {% for start_date in start_dates %}
+                            <li>📆 {{ start_date }}</li>
                         {% endfor %}
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    </ul>
+                    <h4>Duración</h4>
+                    <ul>
+                        {% for duration in durations %}
+                            <li>📆 {{ duration }}</li>
+                        {% endfor %}
+                    </ul>
+                    <h4>Horarios</h4>
+                    <ul>
+                        {% for schedule in schedules %}
+                            <li>🕑 {{ schedule }}</li>
+                        {% endfor %}
+                    </ul>
+                    <h4>Incluye</h4>
+                    <ul>
+                        {% for include_item in includes %}
+                            <li>✴ {{ include_item }}</li>
+                        {% endfor %}
+                    </ul>
+                    <h4>Nota</h4>
+                    <p>{{ note_intro }}</p>
+                    <ul>
+                        {% for item in note_items %}
+                            <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                    {# <h4>Inscripción</h4> #}
+                    {# <p>{{ inscription_text }}</p> #}
+                    {{ content | safe }}
+                    {# <a href="/Inscribete" class="btn btn-custom-blue w-100">Solicita Información</a> #}
                 </div>
             </div>
-            <div class="col-12 col-md-5 py-3 py-md-1">
-                <!-- Información del curso -->
-                <h2>{{ name_carrera }}</h2>
-                <p>{{ description_short }}</p>
-                <h4>Inicios</h4>
-                <ul>
-                    {% for start_date in start_dates %}
-                        <li>📆 {{ start_date }}</li>
-                    {% endfor %}
-                </ul>
-                <h4>Duración</h4>
-                <ul>{% for duration in durations %}
-                        <li>📆 {{ duration }}</li>
-                    {% endfor %}
-                </ul> 
-                <h4>Horarios</h4>
-               <ul>
-                    {% for schedule in schedules %}
-                        <li>🕑 {{ schedule }}</li>
-                    {% endfor %}
-                </ul>
-                <h4>Incluye</h4>
-                <ul>
-                    {% for include_item in includes %}
-                        <li>✴ {{ include_item }}</li>
-                    {% endfor %}
-                </ul>
-                <h4>Nota</h4>
-                <p>{{ note_intro }}</p>
-                <ul>
-                    {% for item in note_items %}
-                        <li>{{ item }}</li>
-                    {% endfor %}
-                </ul>
-                {# <h4>Inscripción</h4> #}
-                {# <p>{{ inscription_text }}</p> #}
-                {{ content | safe }}
-                {# <a href="/Inscribete" class="btn btn-custom-blue w-100">Solicita Información</a> #}
-            </div>
+            {% include "forms.njk" %}
         </div>
-      {% include "forms.njk" %}
-    </div>
-    {% include "footer.njk" %}
-    {% include "whatsapp-btn.njk" %}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script type="module" src="/js/main.js"></script>
-     <script> window.dataLayer = window.dataLayer || []; 
-                function gtag(){dataLayer.push(arguments);} 
-                gtag('js', new Date());
-                gtag('config', 'AW-16973495648'); 
-    </script>
-</body>
+        {% include "footer.njk" %}
+        {% include "whatsapp-btn.njk" %}
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script type="module" src="/js/main.js"></script>
+    </body>
 </html>

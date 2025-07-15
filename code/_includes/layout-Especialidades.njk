@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+               <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16973495648"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'AW-16973495648');
+        </script>
+
+        <!-- El resto de tu head -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title }}</title>
         <meta name="description" content="{{ description }}">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="https://tecsum.edu.mx/Images/Iconos/Logos/Tecsum_Logo.webp" type="image/x-icon">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="shortcut icon" href="/img/Iconos/Logos/Tecsum_Logo.webp" type="image/x-icon">
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
+       
         {% include "header.njk" %}
         <main>
             <div class="banner-fluid">
@@ -36,7 +51,8 @@
                         <p>Como egresado en {{ name_carrera }} obtendrás las competencias y habilidades necesarias para:</p>
                         <ul>
                             {% for item in list_egreso %}
-                                <li> ✅{{ item.name }}</li>
+                                <li>
+                                    ✅{{ item.name }}</li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -52,7 +68,8 @@
                         <h3>Algunos de los perfiles con mayor demanda laboral son:</h3>
                         <ul>
                             {% for item in list_campo %}
-                                <li> ✅ » {{ item.name }}</li>
+                                <li>
+                                    ✅ » {{ item.name }}</li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -62,66 +79,70 @@
                         <p>{{ text_Beneficios }}</p>
                         <ul>
                             {% for item in list_Beneficios %}
-                                <li> ✅ » {{ item.name }}</li>
+                                <li>
+                                    ✅ » {{ item.name }}</li>
                             {% endfor %}
                         </ul>
                     </div>
-
-                     
-
                     <div class="table-container text-center">
                         <div class="row py-3">
                             <div class="col-6 col-md-4">
-                                <img src="https://tecsum.edu.mx/Images/Iconos/Ventajas/Duracion.webp" alt="Duración Imagen" loading="lazy" class="rounded-image">
+                                <img
+                                    src="/img/Iconos/Ventajas/Duracion.webp"
+                                    alt="Duración Imagen"
+                                    loading="lazy"
+                                    class="rounded-image">
                                 <h4>Duración</h4>
                                 <p>{{ duration }}</p>
                             </div>
                             <div class="col-6 col-md-4">
-                                <img src="https://tecsum.edu.mx/Images/Iconos/Ventajas/Modalidad.webp" alt="Modalidad Imagen" loading="lazy" class="rounded-image">
+                                <img
+                                    src="/img/Iconos/Ventajas/Modalidad.webp"
+                                    alt="Modalidad Imagen"
+                                    loading="lazy"
+                                    class="rounded-image">
                                 <h4>Modalidad</h4>
                                 <p>{{ modality }}</p>
                             </div>
                             <div class="col-12 col-md-4">
-                                <img src="https://tecsum.edu.mx/Images/Iconos/Ventajas/Inicio-Curso.webp" alt="Inicio de Curso Imagen" loading="lazy" class="rounded-image">
+                                <img
+                                    src="/img/Iconos/Ventajas/Inicio-Curso.webp"
+                                    alt="Inicio de Curso Imagen"
+                                    loading="lazy"
+                                    class="rounded-image">
                                 <h4>Inicio de Curso</h4>
                                 <p>{{ course_start }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="row py-5 inf-whatsapp">
-                    <div class="col-12">
-                        <h4 class="text-center">Solicita información via Whatsapp</h4>
+                        <div class="col-12">
+                            <h4 class="text-center">Solicita información via Whatsapp</h4>
+                        </div>
                     </div>
                 </div>
-                </div>
-
                 {# <div class="text-center p-5">
-                        <a href="{{ study_plan_url }}" download class="btn btn-download">
-                            <i class="fas fa-download"></i>
-                            Descargar Plan de Estudios PDF
-                        </a>
-                    </div> #}
-                
+                                        <a href="{{ study_plan_url }}" download class="btn btn-download">
+                                            <i class="fas fa-download"></i>
+                                            Descargar Plan de Estudios PDF
+                                        </a>
+                                    </div> #}
                 <div class="row py-5">
                     <div class="col-12">
                         <h2 class="text-center">Disponibles en estos Planteles</h2>
                     </div>
                 </div>
                 <div class="row py-3 text-center">
-                        {% for plantel in planteles %}
-                            <div class="col-12 col-lg-4 mb-3">
-                                <img src="{{ site[plantel.name] }}" class="img-fluid rounded" loading="lazy" alt="{{ plantel.name }}">
-                                <h5 class="mt-2">{{ plantel.name }}</h5>
-                            </div>
-                        {% endfor %}
-                    </div>
+                    {% for plantel in planteles %}
+                        <div class="col-12 col-lg-4 mb-3">
+                            <img src="{{ site[plantel.name] }}" class="img-fluid rounded" loading="lazy" alt="{{ plantel.name }}">
+                            <h5 class="mt-2">{{ plantel.name }}</h5>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
-
             {% include "forms.njk" %}
-
-
         </main>
-
         {% include "footer.njk" %}
         {% include "whatsapp-btn.njk" %}
         <script
@@ -130,10 +151,5 @@
             crossorigin="anonymous"></script>
         {# <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> #}
         <script type="module" src="/js/main.js"></script>
-         <script> window.dataLayer = window.dataLayer || []; 
-                function gtag(){dataLayer.push(arguments);} 
-                gtag('js', new Date());
-                gtag('config', 'AW-16973495648'); 
-        </script>
     </body>
 </html>

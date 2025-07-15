@@ -17,45 +17,74 @@ p {
     /* text-align: justify; */
 }
 
-.icon-egreso{
+.icon-egreso {
     width: 2rem;
     height: 2rem;
 }
 
-ul,ol{
+ul,
+ol {
     font-size: 1.4rem;
 }
 
-.text-justify{
+.text-justify {
     text-align: justify;
 }
 
-.ul-header{
+.ul-header {
     font-size: 1.2rem;
 
 }
 
-.footer-social p{
+.footer-social p {
     font-size: 1.1rem;
 }
 
 
+
+.card-ingreso {
+    max-width: 200px;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    font-weight: 700;
+    /* equivale a fw-bold */
+    text-align: center;
+    color: #6c757d;
+    /* equivalente a text-secondary en Bootstrap */
+    margin-bottom: 0;
+}
+
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f0f0f0fd;
+    /* similar a bg-light */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+
+
 /* skill */
 
-.skill-container{
+.skill-container {
     background-color: #202035;
 }
 
-.skill-container h4{
+.skill-container h4 {
     color: white;
 }
 
-.skill-img{
+.skill-img {
     width: 3rem;
     height: 3rem;
 }
 
-.border-skill{
+.border-skill {
     border: 2px solid;
     border-color: #202035;
 }
@@ -83,13 +112,17 @@ ul,ol{
 }
 
 .banner-text h1 {
-    color: white; /* Cambia el color del texto según tu diseño */
-    font-size: 7rem; /* Tamaño de fuente ajustable según necesites */
+    color: white;
+    /* Cambia el color del texto según tu diseño */
+    font-size: 7rem;
+    /* Tamaño de fuente ajustable según necesites */
 }
 
 .banner-text h2 {
-    color: white; /* Cambia el color del texto según tu diseño */
-    font-size: 5rem; /* Tamaño de fuente ajustable según necesites */
+    color: white;
+    /* Cambia el color del texto según tu diseño */
+    font-size: 5rem;
+    /* Tamaño de fuente ajustable según necesites */
 }
 
 
@@ -116,8 +149,10 @@ ul,ol{
 
 .carousel-vh img {
     object-fit: cover;
-    width: 100%; /* Ajustar el ancho al 100% de su contenedor */
-    height: 100%; /* Altura automática para mantener la proporción */
+    width: 100%;
+    /* Ajustar el ancho al 100% de su contenedor */
+    height: 100%;
+    /* Altura automática para mantener la proporción */
 }
 
 
@@ -133,31 +168,284 @@ ul,ol{
     font-size: 1.2rem;
     font-weight: bold;
     border: none;
-  }
+}
 
-  .accordion-body{
+.accordion-body {
     font-size: 1.2rem;
-  }
+}
 
 
-  .accordion-button:focus {
+.accordion-button:focus {
     box-shadow: none;
-  }
+}
 
-  .accordion-header {
+.accordion-header {
     margin-bottom: 0;
-  }
+}
 
 
 
-  .accordion-item {
+.accordion-item {
     border: none;
-  }
+}
 
-  .accordion-button .highlight {
+.accordion-button .highlight {
     color: var(--bs-custom-blue);
-  }
+}
 
+
+/*Seccion de carreras*/
+
+.hero-section {
+    background: linear-gradient(135deg, #1A4D8F 0%, #2E7D32 100%);
+    border-radius: 1rem;
+    padding: 3rem;
+}
+
+.card-benefit {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(26, 77, 143, 0.1);
+}
+
+.card-benefit:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-benefit i {
+    color: #1A4D8F;
+    margin-bottom: 1rem;
+}
+
+.card-trait {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(26, 77, 143, 0.1);
+}
+
+.trait-icon {
+    width: 80px;
+    height: 80px;
+    background: #1A4D8F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -50px auto 1rem;
+}
+
+.trait-icon i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+/* Estilos mejorados para iconos */
+.icon-container {
+    padding: 1rem;
+    transition: transform 0.3s;
+    min-width: 110px;
+}
+
+.icon-container:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+
+@media(max-width: 768px) {
+    .icon-container {
+        margin: 1rem 0;
+    }
+
+    .fa-balance-scale,
+    .fa-chart-line,
+    .fa-coins {
+        font-size: 2rem !important;
+        padding: 0.8rem;
+    }
+
+    .card-finance-lg {
+        text-align: center;
+    }
+
+    .d-flex {
+        flex-direction: column;
+    }
+}
+
+
+.gallery-item {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: #1A4D8F;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+.icon-box {
+    font-size: 1.8rem;
+    color: #3498db;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.method-card:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease;
+}
+
+.card-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #9b59b6);
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: #3498dd20;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon {
+    width: 35px;
+    height: 35px;
+    background: #3498dd20;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card {
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.career-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste para que el gap funcione bien en móviles */
+.card-header {
+    flex-wrap: wrap;
+}
+
+/* Ajusta icono y texto en tarjetas para móviles */
+@media (max-width: 575.98px) {
+    .card-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .card-header i {
+        margin-bottom: 0.5rem;
+    }
+
+    .card-header h3 {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .skill-card ul li {
+        font-size: 0.95rem;
+    }
+}
+
+/*Programacion*/
+
+
+
+.skill-badge {
+    background: #002a4d;
+    color: white;
+    margin: 0.2rem;
+    font-size: 1rem;
+    padding: 0.5rem 0.9rem;
+}
+
+@media(max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+}
 
 
 
@@ -179,27 +467,32 @@ ul,ol{
 
 /* Proporción 4:5 para vertical */
 .iframe-container.vertical {
-    padding-bottom: 125%; /* 4/5 = 0.8 => 80% pero se invierte */
+    padding-bottom: 125%;
+    /* 4/5 = 0.8 => 80% pero se invierte */
 }
 
 /* Proporción 16:9 para horizontal */
 .iframe-container.horizontal {
-    padding-bottom: 56.25%; /* 9/16 = 0.5625 => 56.25% */
+    padding-bottom: 56.25%;
+    /* 9/16 = 0.5625 => 56.25% */
 }
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 767.98px) {
     .iframe-container.vertical {
-        padding-bottom: 150%; /* Ajuste para mayor altura en móviles */
+        padding-bottom: 150%;
+        /* Ajuste para mayor altura en móviles */
     }
+
     .iframe-container.horizontal {
-        padding-bottom: 75%; /* Ajuste para mayor altura en móviles */
+        padding-bottom: 75%;
+        /* Ajuste para mayor altura en móviles */
     }
 }
 
 
 
-  /* Estilo Especialidades */
+/* Estilo Especialidades */
 
 .perfil-de-egreso {
     background-color: #f5f5f5;
@@ -208,32 +501,39 @@ ul,ol{
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .perfil-de-egreso h2 {
     color: var(--bs-custom-blue);
     font-weight: bold;
     margin-bottom: 15px;
 }
+
 .perfil-de-egreso p {
     margin-bottom: 15px;
 }
+
 .perfil-de-egreso ul {
     list-style-type: none;
     padding: 0;
 }
+
 .perfil-de-egreso ul li {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
+
 .perfil-de-egreso ul li img {
     margin-right: 10px;
 }
+
 .perfil-de-egreso .image-section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5%;
 }
+
 
 .content-section {
     background-color: #f5f5f5;
@@ -242,18 +542,23 @@ ul,ol{
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .content-section h2 {
     color: var(--bs-custom-blue);
     font-weight: bold;
     margin-bottom: 15px;
 }
-.content-section p, .content-section ul {
+
+.content-section p,
+.content-section ul {
     margin-bottom: 15px;
 }
+
 .content-section ul {
     list-style: none;
     padding: 0;
 }
+
 .content-section ul li {
     margin-bottom: 10px;
 }
@@ -274,7 +579,7 @@ h2 {
     font-size: 2rem;
 }
 
-h3{
+h3 {
     color: var(--bs-custom-dark-blue);
     font-weight: bolder;
     font-size: 2rem;
@@ -293,7 +598,7 @@ h3{
 
 /* Planteles imagen */
 
-.img-plantel{
+.img-plantel {
     width: 25rem;
     height: 20rem;
     object-fit: cover;
@@ -302,47 +607,53 @@ h3{
 
 /* Estilos del botón de WhatsApp */
 /* Contenedor del botón flotante */
-.fab {
+.flab {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 100; /* Asegura que el botón esté encima de otros elementos */
+    z-index: 100;
+    /* Asegura que el botón esté encima de otros elementos */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 /* Estilo para el botón principal */
-.fab-button {
+.flab-button {
     width: 56px;
     height: 56px;
-    background-color: #4CAF50; /* Color verde */
+    background-color: #4CAF50;
+    /* Color verde */
     border: none;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra */
     cursor: pointer;
     padding: 0;
     transition: background-color 0.3s ease;
 }
 
-.fab-button:hover {
-    background-color: #388E3C; /* Color de fondo al pasar el mouse */
+.flab-button:hover {
+    background-color: #388E3C;
+    /* Color de fondo al pasar el mouse */
 }
 
 /* Estilo para las imágenes en los botones */
-.fab-icon {
-    width: 24px; /* Ajusta el tamaño según sea necesario */
+.flab-icon {
+    width: 24px;
+    /* Ajusta el tamaño según sea necesario */
     height: 24px;
     transition: transform 0.3s ease;
 }
 
 /* Estilo y animaciones del menú */
-.fab-menu {
+.flab-menu {
     position: absolute;
-    bottom: 70px; /* Ajusta este valor si es necesario */
+    bottom: 70px;
+    /* Ajusta este valor si es necesario */
     right: 0;
     display: flex;
     flex-direction: column;
@@ -354,7 +665,7 @@ h3{
 }
 
 /* Clase para mostrar el menú con animación */
-.fab-menu.show {
+.flab-menu.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -362,28 +673,36 @@ h3{
 
 
 /* Contenedor para el botón del menú y el texto */
-.fab-menu-item-container {
+.flab-menu-item-container {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* Espacio entre los botones */
+    margin-bottom: 10px;
+    /* Espacio entre los botones */
 }
 
 /* Estilo para el texto flotante */
-.fab-menu-text {
-    margin-right: 15px; /* Espacio adicional entre el texto y el botón */
-    color: #f0f0f0; /* Color del texto */
-    background-color: gray; /* Color de fondo para el texto */
-    padding: 5px 10px; /* Espaciado interno del texto */
-    border-radius: 5px; /* Esquinas redondeadas para el fondo del texto */
+.flab-menu-text {
+    margin-right: 15px;
+    /* Espacio adicional entre el texto y el botón */
+    color: #f0f0f0;
+    /* Color del texto */
+    background-color: gray;
+    /* Color de fondo para el texto */
+    padding: 5px 10px;
+    /* Espaciado interno del texto */
+    border-radius: 5px;
+    /* Esquinas redondeadas para el fondo del texto */
     font-size: 1.1rem;
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    white-space: nowrap;
+    /* Evita que el texto se divida en varias líneas */
 }
 
 /* Estilo para los elementos del menú */
-.fab-menu-item {
+.flab-menu-item {
     width: 56px;
     height: 56px;
-    background-color: #4CAF50; /* Color verde */
+    background-color: #4CAF50;
+    /* Color verde */
     border: none;
     border-radius: 50%;
     display: flex;
@@ -395,12 +714,13 @@ h3{
     padding: 0;
 }
 
-.fab-menu-item:hover {
-    background-color: #388E3C; /* Color de fondo al pasar el mouse */
+.flab-menu-item:hover {
+    background-color: #388E3C;
+    /* Color de fondo al pasar el mouse */
 }
 
 /* Mostrar el menú cuando esté activo */
-.fab.show-menu .fab-menu {
+.flab.show-menu .flab-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -428,47 +748,70 @@ h3{
 }
 
 .img-Select {
-    width: auto;  /* Cambia este valor según tus necesidades */
-    height: 220px; /* Cambia este valor según tus necesidades */
-    object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+    width: auto;
+    /* Cambia este valor según tus necesidades */
+    height: 220px;
+    /* Cambia este valor según tus necesidades */
+    object-fit: cover;
+    /* Recorta la imagen para llenar el contenedor */
     border-radius: 5%;
 }
 
 .img-Select-Plantel {
-    width: 35rem;  /* Cambia este valor según tus necesidades */
-    height: 25rem; /* Cambia este valor según tus necesidades */
+    width: 35rem;
+    /* Cambia este valor según tus necesidades */
+    height: 25rem;
+    /* Cambia este valor según tus necesidades */
     border-radius: 5%;
     object-fit: cover;
 }
 
-.img-Comunidad{
-    width: 10rem;  /* Cambia este valor según tus necesidades */
-    height: 10rem; /* Cambia este valor según tus necesidades */
-    object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+.img-Comunidad {
+    width: 10rem;
+    /* Cambia este valor según tus necesidades */
+    height: 10rem;
+    /* Cambia este valor según tus necesidades */
+    object-fit: cover;
+    /* Recorta la imagen para llenar el contenedor */
     border-radius: 5%;
 }
 
 
-.img-Galeria{
-    width: 30rem;  /* Cambia este valor según tus necesidades */
-    height: 20rem; /* Cambia este valor según tus necesidades */
-    object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+.img-Galeria {
+    width: 30rem;
+    /* Cambia este valor según tus necesidades */
+    height: 20rem;
+    /* Cambia este valor según tus necesidades */
+    object-fit: cover;
+    /* Recorta la imagen para llenar el contenedor */
     border-radius: 5%;
 }
 
-.img-Carrera{
-    width: 100%;  /* Cambia este valor según tus necesidades */
-    height: 30rem; /* Cambia este valor según tus necesidades */
-    object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+.img-Carrera {
+    width: 100%;
+    /* Cambia este valor según tus necesidades */
+    height: 30rem;
+    /* Cambia este valor según tus necesidades */
+    object-fit: cover;
+    /* Recorta la imagen para llenar el contenedor */
     border-radius: 3%;
 }
-  
+/* Para dispositivos menores a 768px */
+@media (max-width: 767.98px) {
+  .img-Carrera {
+    height: 15rem;    /* Más pequeño y rectangular */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
 
-.img-Select:hover{
+
+.img-Select:hover {
     animation: select 0.05s ease-in-out both;
 }
 
-.img-Select-Plantel:hover{
+.img-Select-Plantel:hover {
     animation: select 0.05s ease-in-out both;
 }
 
@@ -487,7 +830,8 @@ h3{
     width: 6rem;
     height: 6rem;
     object-fit: cover;
-    margin: 0 auto 20px; /* Center the image and add bottom margin */
+    margin: 0 auto 20px;
+    /* Center the image and add bottom margin */
 }
 
 /* Estilos para botones */
@@ -499,22 +843,27 @@ h3{
 .btn-download {
     background-color: #0a2472;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 8px;
     text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 12px rgba(10, 36, 114, 0.3);
 }
 
 .btn-download:hover {
-    background-color: #a6e1fa;
-    border-color: #0a2472;
-    border-style: solid;
+    background-color: #0042bd;
+    box-shadow: 0 6px 18px rgba(10, 36, 114, 0.4);
+    color: #ffffff;
+
 }
 
 .btn-download i {
-    margin-right: 5px;
+    font-size: 1.2rem;
 }
+
 
 /* Estilos de video y mapa */
 .video-container,
@@ -540,7 +889,7 @@ h3{
     height: 100%;
 }
 
-.inf-whatsapp h4{
+.inf-whatsapp h4 {
     color: #4CAF50;
     font-weight: bold;
 }
@@ -550,9 +899,11 @@ h3{
 .image {
     overflow: hidden;
     cursor: pointer;
-  }
-  
-  .popup-image {
+}
+
+
+
+.popup-image {
     position: fixed;
     top: 0;
     left: 0;
@@ -563,9 +914,9 @@ h3{
     justify-content: center;
     align-items: center;
     z-index: 100;
-  }
-  
-  .popup-image span {
+}
+
+.popup-image span {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -574,105 +925,127 @@ h3{
     color: #fff;
     cursor: pointer;
     z-index: 100;
-  }
-  
-  .popup-image img {
+}
+
+.popup-image img {
     max-width: 90%;
     max-height: 90%;
     border: 5px solid #fff;
     border-radius: 5px;
-  }
+}
 
-  /* Añade clase para mostrar el popup */
+/* Añade clase para mostrar el popup */
 .popup-image.active {
     display: flex;
-  }
+}
 
-  /* Estilos para las flechas de navegación */
+/* Estilos para las flechas de navegación */
 .popup-image .prev,
 .popup-image .next {
-  position: absolute;
-  top: 50%;
-  font-size: 40px;
-  color: #fff;
-  cursor: pointer;
-  user-select: none;
-  z-index: 101;
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    z-index: 101;
+    width: 60px;
+    height: 80px;
 }
 
 .popup-image .prev {
-  left: 20px;
+    left: 20px;
 }
 
 .popup-image .next {
-  right: 20px;
+    right: 20px;
 }
 
 /* Opcional: Centrar verticalmente las flechas */
 .popup-image .prev,
 .popup-image .next {
-  transform: translateY(-50%);
+    transform: translateY(-50%);
 }
-  
+
 
 @media (max-width: 768px) {
-    .carousel-vh img{
-        height: auto; /* En dispositivos móviles, altura automática */
+    .carousel-vh img {
+        height: auto;
+        /* En dispositivos móviles, altura automática */
     }
 
-        .banner-text h1{
-        font-size: 3rem; /* Tamaño de fuente para dispositivos con ancho máximo de 600px */
+    .banner-text h1 {
+        font-size: 3rem;
+        /* Tamaño de fuente para dispositivos con ancho máximo de 600px */
     }
 
     .banner-text h2 {
-        font-size: 3rem; /* Tamaño de fuente ajustable según necesites */
+        font-size: 3rem;
+        /* Tamaño de fuente ajustable según necesites */
     }
 
-    .footer-social p{
+    .footer-social p {
         font-size: 1rem;
     }
 
-    p{
+    p {
         font-size: 1.1rem;
     }
+
     .titleFont {
         font-size: 2rem;
     }
-    h2{
+
+    h2 {
         font-size: 1.8rem;
     }
-    h3{
+
+    h3 {
         font-size: 1.6rem;
     }
-    ul{
+
+    ul {
         font-size: 1.2rem;
     }
-    .skill-container h4{
+
+    .skill-container h4 {
         font-size: 1.3rem;
     }
-    .img-Galeria{
-        width: 10rem;  /* Cambia este valor según tus necesidades */
-        height: 10rem; /* Cambia este valor según tus necesidades */
-        object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+
+    .img-Galeria {
+        width: 10rem;
+        /* Cambia este valor según tus necesidades */
+        height: 10rem;
+        /* Cambia este valor según tus necesidades */
+        object-fit: cover;
+        /* Recorta la imagen para llenar el contenedor */
         border-radius: 5%;
     }
+
     .img-Select {
-        width: auto;  /* Cambia este valor según tus necesidades */
-        height: 12rem; /* Cambia este valor según tus necesidades */
-        object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+        width: auto;
+        /* Cambia este valor según tus necesidades */
+        height: 12rem;
+        /* Cambia este valor según tus necesidades */
+        object-fit: cover;
+        /* Recorta la imagen para llenar el contenedor */
         border-radius: 5%;
     }
 
     .img-Select-Plantel {
-        width: 25rem;  /* Cambia este valor según tus necesidades */
-        height: 15rem; /* Cambia este valor según tus necesidades */
+        width: 25rem;
+        /* Cambia este valor según tus necesidades */
+        height: 15rem;
+        /* Cambia este valor según tus necesidades */
         border-radius: 5%;
         object-fit: cover;
     }
+
     .icon {
         width: 70px;
         height: 70px;
     }
+
     .subtitle {
         font-size: 1rem;
         font-weight: bold;
@@ -680,7 +1053,7 @@ h3{
 
     .img-fit-container {
         max-height: 200px;
-        
+
     }
 
     .rounded-image {
@@ -688,25 +1061,26 @@ h3{
         height: 4rem;
     }
 
-    .img-plantel{
+    .img-plantel {
         width: 20rem;
         height: 15rem;
     }
 
-    .fab-button {
+    .flab-button {
         width: 48px;
         height: 48px;
     }
-    
-    .fab-menu-item {
+
+    .flab-menu-item {
         width: 48px;
         height: 48px;
     }
-    
-    .fab-menu {
-        bottom: 60px; /* Ajustar el espaciado en pantallas pequeñas */
+
+    .flab-menu {
+        bottom: 60px;
+        /* Ajustar el espaciado en pantallas pequeñas */
     }
-    
+
 
 }
 
@@ -724,6 +1098,54 @@ h3{
 
 }
 
+
+.card-design {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    /* borde gris claro */
+    border-radius: 0.5rem;
+    /* bordes redondeados */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+.card-design:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+
+
+.card-header-design {
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente ícono y texto */
+    gap: 1rem;
+    /* Espacio entre ícono y texto */
+    padding: 1rem 1.25rem;
+    border-bottom: 2px solid #dee2e6;
+    /* Línea azul */
+}
+
+.card-header-design i {
+    font-size: 2rem;
+    /* Tamaño grande para el ícono */
+    color: #007bff;
+    flex-shrink: 0;
+    /* Que el ícono no se reduzca */
+}
+
+.card-header-design h5 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #212529;
+    line-height: 1;
+    /* Mejor alineación con ícono */
+}
 
 
 
@@ -806,6 +1228,35 @@ h3{
     color: #666;
 }
 
+.card-responsive {
+    position: relative;
+    width: 100%;       
+    max-width: 320px;          /* Opcional: controla el tamaño máximo en pantallas grandes */
+    min-height: 380px;         /* Altura base, ajustable según tu contenido */
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;          /* Para imágenes o decoraciones internas */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: auto;              /* Centrado dentro de la columna */
+    
+    
+}
+
+.card-responsive:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card-responsive-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
 
 
 /* Otros estilos */
@@ -843,12 +1294,13 @@ h3{
     }
 }
 
-@keyframes select{
-    from{
+@keyframes select {
+    from {
         scale: 100%;
         filter: brightness(100%);
     }
-    to{
+
+    to {
         scale: 95%;
         filter: brightness(50%);
     }

@@ -37,5 +37,25 @@
         "TECSUM",
         "Tlalnepantla",
         "webp"
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#423b6f",
+        "activityBar.background": "#423b6f",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#000000",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#423b6f",
+        "statusBar.background": "#2e294e",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#423b6f",
+        "statusBarItem.remoteBackground": "#2e294e",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#2e294e",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#2e294e99",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#2E294E"
 }

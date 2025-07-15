@@ -58,6 +58,13 @@ form.addEventListener('submit', e => {
     fetch(scriptURL, { method: 'POST', body: formData })
         .then(response => {
             if (response.ok) {
+
+                // 🔹 Evento de conversión de Google Ads:
+                // Medir el total de clicks en el formulario
+                 gtag('event', 'conversion', {
+                'send_to': 'AW-16973495648/_LIHCNX2qbMaEOD6y50_',
+                });
+
                 const myModal = new bootstrap.Modal(document.getElementById('formModal'), {
                     keyboard: false
                 });

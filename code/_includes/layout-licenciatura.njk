@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+            <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16973495648"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'AW-16973495648');
+        </script>
+
+        <!-- El resto de tu head -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Lato:ital,wght@0,100;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/Iconos/Logos/Tecsum_Logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- ... mismo código de analytics ... -->
+
+    {% include "header.njk" %}
+    
+    <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 text-white">
+                    <h1 class="titleFont mb-4">{{ name_carrera }}</h1>
+                    <div class="lead mb-4">{{ description_short }}</div>
+                    <a href="#formulario" class="btn btn-lg btn-accent">¡Quiero más información!</a>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <img src="{{ featured_image }}" class="img-fluid img-Carrera" alt="{{ name_carrera }}" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="feature-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-clock fa-2x text-primary"></i>
+                    </div>
+                    <h4 class="text-center">Duración</h4>
+                    <p class="text-center text-muted">{{ duration }}</p>
+                </div>
+            </div>
+            <!-- Repetir para otras tarjetas -->
+        </div>
+    </div>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Plan de Estudios</h2>
+            <div class="d-grid gap-2 col-md-6 mx-auto">
+                <a href="{{ study_plan_url }}" download class="btn btn-download">
+                    <i class="fas fa-file-pdf me-2"></i>Descargar Programa Completo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ... resto de las secciones ... -->
+
+    {% include "footer.njk" %}
+    
+</body>
+</html>
