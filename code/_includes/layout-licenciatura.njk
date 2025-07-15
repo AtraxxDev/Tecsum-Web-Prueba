@@ -13,14 +13,27 @@
         </script>
 
         <!-- El resto de tu head -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <meta name="description" content="{{ description }}">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Lato:ital,wght@0,100;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/img/Iconos/Logos/Tecsum_Logo.webp" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
+   <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+        <meta
+        name="description" content="{{ description }}"> <!-- Preconnect para Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link
+        rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Google Fonts: Oswald y Lato con display=swap -->
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet"> <!-- Font Awesome desde CDN (puedes autohospedar si deseas máximo rendimiento) -->
+        <link
+        rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"/> <!-- Favicon -->
+        <link
+        rel="shortcut icon" href="/img/Iconos/Logos/Tecsum_Logo.webp" type="image/webp"> <!-- Tus hojas de estilo -->
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <!-- ... mismo código de analytics ... -->
