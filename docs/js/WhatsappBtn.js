@@ -10,7 +10,7 @@ export function WhatsappBtn() {
             setTimeout(() => {
                 flabMenu.classList.add('show');
                 const flabIcon = flabButton.querySelector('img');
-                flabIcon.src = '/Tecsum-Web-Prueba/img/Iconos/Redes_Sociales/Close-X.webp'; // Cambia al icono de cierre
+                flabIcon.src = '/img/Iconos/Redes_Sociales/Close-X.webp'; // Cambia al icono de cierre
                 flabIcon.classList.remove('rotate-icon', 'reverse');
                 flabIcon.classList.add('rotate-icon');
             }, 10); // Permite la transición
@@ -20,7 +20,7 @@ export function WhatsappBtn() {
         function hideMenu() {
             flabMenu.classList.remove('show');
             const flabIcon = flabButton.querySelector('img');
-            flabIcon.src = '/Tecsum-Web-Prueba/img/Iconos/Redes_Sociales/Whatsapp.webp'; // Cambia al icono original
+            flabIcon.src = '/img/Iconos/Redes_Sociales/Whatsapp.webp'; // Cambia al icono original
             flabIcon.classList.remove('rotate-icon');
             flabIcon.classList.add('rotate-icon', 'reverse');
             setTimeout(() => {

@@ -17,18 +17,8 @@ p {
     /* text-align: justify; */
 }
 
-.icon-egreso {
-    width: 2rem;
-    height: 2rem;
-}
-
-ul,
-ol {
+ul {
     font-size: 1.4rem;
-}
-
-.text-justify {
-    text-align: justify;
 }
 
 .ul-header {
@@ -42,526 +32,55 @@ ol {
 
 
 
-.card-ingreso {
-    max-width: 200px;
-    line-height: 1.6;
-    font-size: 1.2rem;
-    font-weight: 700;
-    /* equivale a fw-bold */
-    text-align: center;
-    color: #6c757d;
-    /* equivalente a text-secondary en Bootstrap */
-    margin-bottom: 0;
-}
-
-.icon-circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #f0f0f0fd;
-    /* similar a bg-light */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 1rem;
-}
-
-
-
 /* skill */
-
-.skill-container {
-    background-color: #202035;
-}
-
-.skill-container h4 {
-    color: white;
-}
-
-.skill-img {
-    width: 3rem;
-    height: 3rem;
-}
-
-.border-skill {
-    border: 2px solid;
-    border-color: #202035;
-}
 
 /* Banner */
 
-.banner-fluid {
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-.banner-image {
-    width: 100%;
-    height: auto;
-}
-
-.banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-}
-
-.banner-text h1 {
-    color: white;
-    /* Cambia el color del texto según tu diseño */
-    font-size: 7rem;
-    /* Tamaño de fuente ajustable según necesites */
-}
-
-.banner-text h2 {
-    color: white;
-    /* Cambia el color del texto según tu diseño */
-    font-size: 5rem;
-    /* Tamaño de fuente ajustable según necesites */
-}
-
-
-
-
-.banner-image {
-    width: 100%;
-    height: 500px;
-    display: block;
-    object-fit: cover;
-    filter: brightness(50%);
-}
-
-.banner-image-Esp {
-    width: 100%;
-    height: 300px;
-    display: block;
-    object-fit: cover;
-    filter: brightness(50%);
-    object-position: center;
-}
-
 /* Carrusel */
-
-.carousel-vh img {
-    object-fit: cover;
-    width: 100%;
-    /* Ajustar el ancho al 100% de su contenedor */
-    height: 100%;
-    /* Altura automática para mantener la proporción */
-}
-
-
-
-.carousel-indicators button {
-    background-color: #000;
-}
 
 
 
 /* Estilo acordion */
-.accordion-button {
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-}
-
-.accordion-body {
-    font-size: 1.2rem;
-}
-
-
-.accordion-button:focus {
-    box-shadow: none;
-}
-
-.accordion-header {
-    margin-bottom: 0;
-}
-
-
-
-.accordion-item {
-    border: none;
-}
-
-.accordion-button .highlight {
-    color: var(--bs-custom-blue);
-}
 
 
 /*Seccion de carreras*/
-
-.hero-section {
-    background: linear-gradient(135deg, #1A4D8F 0%, #2E7D32 100%);
-    border-radius: 1rem;
-    padding: 3rem;
-}
-
-.card-benefit {
-    background: white;
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 2px solid rgba(26, 77, 143, 0.1);
-}
-
-.card-benefit:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.card-benefit i {
-    color: #1A4D8F;
-    margin-bottom: 1rem;
-}
-
-.card-trait {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(26, 77, 143, 0.1);
-}
-
-.trait-icon {
-    width: 80px;
-    height: 80px;
-    background: #1A4D8F;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: -50px auto 1rem;
-}
-
-.trait-icon i {
-    color: white;
-    font-size: 1.5rem;
-}
 
 
 
 
 
 /* Estilos mejorados para iconos */
-.icon-container {
-    padding: 1rem;
-    transition: transform 0.3s;
-    min-width: 110px;
-}
-
-.icon-container:hover {
-    transform: translateY(-5px);
-}
 
 
 
 
 
 @media(max-width: 768px) {
-    .icon-container {
-        margin: 1rem 0;
-    }
-
-    .fa-balance-scale,
-    .fa-chart-line,
-    .fa-coins {
-        font-size: 2rem !important;
-        padding: 0.8rem;
-    }
-
-    .card-finance-lg {
-        text-align: center;
-    }
 
     .d-flex {
         flex-direction: column;
     }
 }
 
-
-.gallery-item {
-    position: relative;
-    border-radius: 1rem;
-    overflow: hidden;
-}
-
-.gallery-overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    width: 100%;
-    padding: 1rem;
-    transform: translateY(100%);
-    transition: all 0.3s ease;
-}
-
-.gallery-item:hover .gallery-overlay {
-    transform: translateY(0);
-}
-
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    width: 100px;
-    height: 4px;
-    background: #1A4D8F;
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        padding: 2rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-}
-
-.icon-box {
-    font-size: 1.8rem;
-    color: #3498db;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.method-card:hover {
-    transform: translateY(-4px);
-    transition: transform 0.3s ease;
-}
-
-.card-decoration {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #3498db, #9b59b6);
-}
-
-.icon-wrapper {
-    width: 60px;
-    height: 60px;
-    background: #3498dd20;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.stat-icon {
-    width: 35px;
-    height: 35px;
-    background: #3498dd20;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.skill-card {
-    transition: transform 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-}
-
-.career-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.career-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
 /* Ajuste para que el gap funcione bien en móviles */
-.card-header {
-    flex-wrap: wrap;
-}
 
 /* Ajusta icono y texto en tarjetas para móviles */
-@media (max-width: 575.98px) {
-    .card-header {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .card-header i {
-        margin-bottom: 0.5rem;
-    }
-
-    .card-header h3 {
-        width: 100%;
-        margin-bottom: 0;
-    }
-
-    .skill-card ul li {
-        font-size: 0.95rem;
-    }
-}
 
 /*Programacion*/
 
 
 
-.skill-badge {
-    background: #002a4d;
-    color: white;
-    margin: 0.2rem;
-    font-size: 1rem;
-    padding: 0.5rem 0.9rem;
-}
-
-@media(max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
-}
-
-
-
 /* Estilo Responsivo Facebook */
-.iframe-container {
-    position: relative;
-    overflow: hidden;
-    height: 0;
-}
-
-.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
 
 /* Proporción 4:5 para vertical */
-.iframe-container.vertical {
-    padding-bottom: 125%;
-    /* 4/5 = 0.8 => 80% pero se invierte */
-}
 
 /* Proporción 16:9 para horizontal */
-.iframe-container.horizontal {
-    padding-bottom: 56.25%;
-    /* 9/16 = 0.5625 => 56.25% */
-}
 
 /* Ajustes para pantallas pequeñas */
-@media (max-width: 767.98px) {
-    .iframe-container.vertical {
-        padding-bottom: 150%;
-        /* Ajuste para mayor altura en móviles */
-    }
-
-    .iframe-container.horizontal {
-        padding-bottom: 75%;
-        /* Ajuste para mayor altura en móviles */
-    }
-}
 
 
 
 /* Estilo Especialidades */
-
-.perfil-de-egreso {
-    background-color: #f5f5f5;
-    border-radius: 15px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.perfil-de-egreso h2 {
-    color: var(--bs-custom-blue);
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.perfil-de-egreso p {
-    margin-bottom: 15px;
-}
-
-.perfil-de-egreso ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.perfil-de-egreso ul li {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.perfil-de-egreso ul li img {
-    margin-right: 10px;
-}
-
-.perfil-de-egreso .image-section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5%;
-}
-
-
-.content-section {
-    background-color: #f5f5f5;
-    border-radius: 15px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.content-section h2 {
-    color: var(--bs-custom-blue);
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.content-section p,
-.content-section ul {
-    margin-bottom: 15px;
-}
-
-.content-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.content-section ul li {
-    margin-bottom: 10px;
-}
 
 
 /* Estilos para subtitulos */
@@ -579,12 +98,6 @@ h2 {
     font-size: 2rem;
 }
 
-h3 {
-    color: var(--bs-custom-dark-blue);
-    font-weight: bolder;
-    font-size: 2rem;
-}
-
 .titleFont {
     color: #0a2472;
     font-size: 4rem;
@@ -597,12 +110,6 @@ h3 {
 }
 
 /* Planteles imagen */
-
-.img-plantel {
-    width: 25rem;
-    height: 20rem;
-    object-fit: cover;
-}
 
 
 /* Estilos del botón de WhatsApp */
@@ -665,11 +172,6 @@ h3 {
 }
 
 /* Clase para mostrar el menú con animación */
-.flab-menu.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
 
 
 /* Contenedor para el botón del menú y el texto */
@@ -720,25 +222,10 @@ h3 {
 }
 
 /* Mostrar el menú cuando esté activo */
-.flab.show-menu .flab-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
 
 
 
 /* Estilos de imagen */
-.img-fit-container {
-    height: 400px;
-}
-
-.img-fit {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 40%;
-}
 
 .img-form {
     width: 100%;
@@ -765,46 +252,7 @@ h3 {
     border-radius: 5%;
     object-fit: cover;
 }
-
-.img-Comunidad {
-    width: 10rem;
-    /* Cambia este valor según tus necesidades */
-    height: 10rem;
-    /* Cambia este valor según tus necesidades */
-    object-fit: cover;
-    /* Recorta la imagen para llenar el contenedor */
-    border-radius: 5%;
-}
-
-
-.img-Galeria {
-    width: 30rem;
-    /* Cambia este valor según tus necesidades */
-    height: 20rem;
-    /* Cambia este valor según tus necesidades */
-    object-fit: cover;
-    /* Recorta la imagen para llenar el contenedor */
-    border-radius: 5%;
-}
-
-.img-Carrera {
-    width: 100%;
-    /* Cambia este valor según tus necesidades */
-    height: 30rem;
-    /* Cambia este valor según tus necesidades */
-    object-fit: cover;
-    /* Recorta la imagen para llenar el contenedor */
-    border-radius: 3%;
-}
 /* Para dispositivos menores a 768px */
-@media (max-width: 767.98px) {
-  .img-Carrera {
-    height: 15rem;    /* Más pequeño y rectangular */
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
 
 
 .img-Select:hover {
@@ -816,23 +264,6 @@ h3 {
 }
 
 /* Estilos de tabla */
-.table-container {
-
-    padding: 20px;
-}
-
-.thick-hr {
-    border: 3px solid #000000;
-    border-radius: 10px;
-}
-
-.rounded-image {
-    width: 6rem;
-    height: 6rem;
-    object-fit: cover;
-    margin: 0 auto 20px;
-    /* Center the image and add bottom margin */
-}
 
 /* Estilos para botones */
 .btn-primary {
@@ -840,59 +271,8 @@ h3 {
     width: 100%;
 }
 
-.btn-download {
-    background-color: #0a2472;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    border: none;
-    box-shadow: 0 4px 12px rgba(10, 36, 114, 0.3);
-}
-
-.btn-download:hover {
-    background-color: #0042bd;
-    box-shadow: 0 6px 18px rgba(10, 36, 114, 0.4);
-    color: #ffffff;
-
-}
-
-.btn-download i {
-    font-size: 1.2rem;
-}
-
 
 /* Estilos de video y mapa */
-.video-container,
-.map-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-}
-
-.video-container iframe,
-.map-container iframe,
-.video-container object,
-.map-container object,
-.video-container embed,
-.map-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.inf-whatsapp h4 {
-    color: #4CAF50;
-    font-weight: bold;
-}
 
 
 /* Estilos popup-image */
@@ -901,88 +281,14 @@ h3 {
     cursor: pointer;
 }
 
-
-
-.popup-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.9);
-    height: 100%;
-    width: 100%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-}
-
-.popup-image span {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    z-index: 100;
-}
-
-.popup-image img {
-    max-width: 90%;
-    max-height: 90%;
-    border: 5px solid #fff;
-    border-radius: 5px;
-}
-
 /* Añade clase para mostrar el popup */
-.popup-image.active {
-    display: flex;
-}
 
 /* Estilos para las flechas de navegación */
-.popup-image .prev,
-.popup-image .next {
-    position: absolute;
-    top: 50%;
-    font-size: 40px;
-    color: #fff;
-    cursor: pointer;
-    user-select: none;
-    z-index: 101;
-    width: 60px;
-    height: 80px;
-}
-
-.popup-image .prev {
-    left: 20px;
-}
-
-.popup-image .next {
-    right: 20px;
-}
 
 /* Opcional: Centrar verticalmente las flechas */
-.popup-image .prev,
-.popup-image .next {
-    transform: translateY(-50%);
-}
 
 
 @media (max-width: 768px) {
-    .carousel-vh img {
-        height: auto;
-        /* En dispositivos móviles, altura automática */
-    }
-
-    .banner-text h1 {
-        font-size: 3rem;
-        /* Tamaño de fuente para dispositivos con ancho máximo de 600px */
-    }
-
-    .banner-text h2 {
-        font-size: 3rem;
-        /* Tamaño de fuente ajustable según necesites */
-    }
 
     .footer-social p {
         font-size: 1rem;
@@ -1000,26 +306,8 @@ h3 {
         font-size: 1.8rem;
     }
 
-    h3 {
-        font-size: 1.6rem;
-    }
-
     ul {
         font-size: 1.2rem;
-    }
-
-    .skill-container h4 {
-        font-size: 1.3rem;
-    }
-
-    .img-Galeria {
-        width: 10rem;
-        /* Cambia este valor según tus necesidades */
-        height: 10rem;
-        /* Cambia este valor según tus necesidades */
-        object-fit: cover;
-        /* Recorta la imagen para llenar el contenedor */
-        border-radius: 5%;
     }
 
     .img-Select {
@@ -1051,21 +339,6 @@ h3 {
         font-weight: bold;
     }
 
-    .img-fit-container {
-        max-height: 200px;
-
-    }
-
-    .rounded-image {
-        width: 4rem;
-        height: 4rem;
-    }
-
-    .img-plantel {
-        width: 20rem;
-        height: 15rem;
-    }
-
     .flab-button {
         width: 48px;
         height: 48px;
@@ -1082,69 +355,6 @@ h3 {
     }
 
 
-}
-
-@media (min-width: 992px) {
-    .map-container {
-        padding-bottom: 0;
-        height: 500px;
-    }
-
-    .map-container iframe,
-    .map-container object,
-    .map-container embed {
-        height: 500px;
-    }
-
-}
-
-
-.card-design {
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    /* borde gris claro */
-    border-radius: 0.5rem;
-    /* bordes redondeados */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    overflow: hidden;
-}
-
-.card-design:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transform: translateY(-5px);
-}
-
-
-
-.card-header-design {
-    display: flex;
-    align-items: center;
-    /* Centra verticalmente ícono y texto */
-    gap: 1rem;
-    /* Espacio entre ícono y texto */
-    padding: 1rem 1.25rem;
-    border-bottom: 2px solid #dee2e6;
-    /* Línea azul */
-}
-
-.card-header-design i {
-    font-size: 2rem;
-    /* Tamaño grande para el ícono */
-    color: #007bff;
-    flex-shrink: 0;
-    /* Que el ícono no se reduzca */
-}
-
-.card-header-design h5 {
-    margin: 0;
-    font-weight: 600;
-    font-size: 1.25rem;
-    color: #212529;
-    line-height: 1;
-    /* Mejor alineación con ícono */
 }
 
 
@@ -1188,10 +398,6 @@ h3 {
     border-top-right-radius: 8px;
 }
 
-.card-body {
-    padding: 20px;
-}
-
 .card-title {
     font-size: 20px;
     margin-bottom: 10px;
@@ -1228,47 +434,12 @@ h3 {
     color: #666;
 }
 
-.card-responsive {
-    position: relative;
-    width: 100%;       
-    max-width: 320px;          /* Opcional: controla el tamaño máximo en pantallas grandes */
-    min-height: 380px;         /* Altura base, ajustable según tu contenido */
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;          /* Para imágenes o decoraciones internas */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: auto;              /* Centrado dentro de la columna */
-    
-    
-}
-
-.card-responsive:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.card-responsive-body {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
 
 
 
 /* Otros estilos */
-.whatsapp-icon {
-    width: 50px;
-    height: auto;
-}
 
 /* Animaciones */
-.rotate-icon {
-    animation: rotateIcon 0.2s ease forwards;
-}
 
 @keyframes rotateIcon {
     from {
@@ -1278,10 +449,6 @@ h3 {
     to {
         transform: rotate(90deg);
     }
-}
-
-.rotate-icon.reverse {
-    animation: rotateIconReverse 0.2s ease forwards;
 }
 
 @keyframes rotateIconReverse {
